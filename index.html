@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netlify Dashboard</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+    <!-- Development version -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- Production version -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="min-h-screen bg-gray-50">
+    <div class="min-h-screen bg-gray-50 flex">
+      <!-- Mobile Sidebar Overlay -->
+      <div
+        id="sidebar-overlay"
+        class="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden hidden"
+      ></div>
+
+      <!-- Sidebar -->
+      <div
+        id="sidebar"
+        class="fixed lg:static inset-y-0 left-0 z-50 w-64 bg-white border-r border-gray-200 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out"
+      >
+        <div class="flex flex-col h-full">
+          <!-- Header -->
+          <div class="p-4 border-b border-gray-200">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center space-x-2">
+                <div
+                  class="w-8 h-8 bg-teal-500 rounded flex items-center justify-center"
+                >
+                  <span class="text-white font-bold text-sm">N</span>
+                </div>
+                <span class="font-semibold text-gray-900">Projects</span>
+              </div>
+              <button id="close-sidebar" class="lg:hidden p-1">
+                <i data-lucide="x" class="w-5 h-5 text-gray-500"></i>
+              </button>
+            </div>
+
+            <!-- Search -->
+            <div class="relative mb-4">
+              <i
+                data-lucide="search"
+                class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
+              ></i>
+              <input
+                type="text"
+                placeholder="Search Netlify..."
+                class="w-full pl-10 pr-4 py-2 bg-gray-100 border-0 rounded-md text-sm focus:ring-2 focus:ring-teal-500 focus:bg-white"
+              />
+            </div>
+
+            <!-- Team Selector -->
+            <div>
+              <button
+                class="w-full flex items-center justify-between p-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md"
+              >
+                <div class="flex items-center space-x-2">
+                  <div
+                    class="w-6 h-6 bg-blue-500 rounded flex items-center justify-center"
+                  >
+                    <span class="text-white text-xs font-bold">A</span>
+                  </div>
+                  <span>aramShim's team</span>
+                </div>
+                <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <nav class="flex-1 p-4 space-y-1">
+            <button
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors bg-teal-50 text-teal-700 border-r-2 border-teal-500"
+            >
+              <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+              <span>Projects</span>
+            </button>
+            <button
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+            >
+              <i data-lucide="code" class="w-4 h-4"></i>
+              <span>Builds</span>
+            </button>
+            <button
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+            >
+              <i data-lucide="activity" class="w-4 h-4"></i>
+              <span>Extensions</span>
+            </button>
+            <button
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+            >
+              <i data-lucide="globe" class="w-4 h-4"></i>
+              <span>Domains</span>
+            </button>
+            <button
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+            >
+              <i data-lucide="users" class="w-4 h-4"></i>
+              <span>Members</span>
+            </button>
+            <button
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+            >
+              <i data-lucide="list" class="w-4 h-4"></i>
+              <span>Audit log</span>
+            </button>
+            <button
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+            >
+              <i data-lucide="shield" class="w-4 h-4"></i>
+              <span>Security Scorecard</span>
+            </button>
+            <button
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+            >
+              <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+              <span>Usage & billing</span>
+            </button>
+            <button
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+            >
+              <i data-lucide="settings" class="w-4 h-4"></i>
+              <span>Team settings</span>
+            </button>
+            <button
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+            >
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+              <span>Visual editor dashboard</span>
+            </button>
+          </nav>
+
+          <!-- Footer -->
+          <div class="p-4 border-t border-gray-200">
+            <button
+              class="w-full bg-teal-500 text-white py-2 px-4 rounded-md text-sm font-medium hover:bg-teal-600 transition-colors"
+            >
+              Upgrade
+            </button>
+            <div class="mt-3 flex items-center space-x-2 text-xs text-gray-500">
+              <div
+                class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center"
+              >
+                <span class="text-white text-xs">A</span>
+              </div>
+              <span>geo890@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-1 flex flex-col min-w-0">
+        <!-- Top Header -->
+        <header class="bg-white border-b border-gray-200 px-4 lg:px-6 py-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <button id="open-sidebar" class="lg:hidden p-2 -ml-2">
+                <i data-lucide="menu" class="w-5 h-5 text-gray-600"></i>
+              </button>
+              <h1 class="text-xl font-semibold text-gray-900">Projects</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+              <button class="text-sm text-gray-600 hover:text-gray-900">
+                News
+              </button>
+              <button class="text-sm text-gray-600 hover:text-gray-900">
+                Support
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <!-- Notification -->
+        <div class="bg-green-50 border-l-4 border-green-400 p-4 m-4 lg:m-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <div
+                  class="w-5 h-5 bg-green-400 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-white text-xs">✓</span>
+                </div>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm text-green-700">
+                  Onboarding dismissed.
+                  <button class="font-medium underline">Undo dismiss?</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <main class="flex-1 px-4 lg:px-6 pb-6">
+          <!-- Filters and Controls -->
+          <div
+            class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6 space-y-2 lg:space-y-0"
+          >
+            <div
+              class="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-2"
+            >
+              <div class="relative flex-1 sm:flex-initial sm:w-80">
+                <i
+                  data-lucide="search"
+                  class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
+                ></i>
+                <input
+                  type="text"
+                  placeholder="Search projects"
+                  class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                />
+              </div>
+
+              <div
+                class="flex flex-wrap items-center gap-2 text-sm text-gray-600"
+              >
+                <span>Owned by</span>
+                <button class="font-medium text-gray-900">This team</button>
+                <span>Created by</span>
+                <button class="font-medium text-gray-900">Anyone</button>
+                <span>Access</span>
+                <button class="font-medium text-gray-900">Any</button>
+                <button class="text-teal-600 hover:text-teal-700">
+                  Edit filters
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center justify-between lg:justify-end space-x-4"
+            >
+              <button
+                class="flex items-center space-x-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-900"
+              >
+                <span>Last published</span>
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              </button>
+
+              <div class="flex items-center space-x-2">
+                <div class="flex border border-gray-300 rounded-md">
+                  <button id="list-view" class="p-2">
+                    <i data-lucide="list" class="w-4 h-4 text-gray-600"></i>
+                  </button>
+                  <button id="grid-view" class="p-2 bg-gray-100">
+                    <i data-lucide="grid-3x3" class="w-4 h-4 text-gray-600"></i>
+                  </button>
+                </div>
+
+                <button
+                  class="bg-teal-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-teal-600 transition-colors flex items-center space-x-2"
+                >
+                  <span>Add new project</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projects Grid -->
+          <div
+            id="projects-container"
+            class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          >
+            <!-- Projects will be populated by JavaScript -->
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      // Project data
+      const projects = [
+        {
+          id: 1,
+          name: "music-monster",
+          source: "GitHub",
+          owner: "aramShim's team",
+          published: "Oct 11, 2024 (8 months ago)",
+          color: "bg-gradient-to-br from-purple-900 to-blue-900",
+          starred: true,
+        },
+        {
+          id: 2,
+          name: "patraglobal",
+          source: "GitHub",
+          owner: "aramShim's team",
+          published: "May 12 (a month ago)",
+          color: "bg-gradient-to-br from-gray-400 to-gray-600",
+          starred: false,
+        },
+        {
+          id: 3,
+          name: "coolncoolweb",
+          source: "GitHub",
+          owner: "aramShim's team",
+          published: "Apr 2 (2 months ago)",
+          color: "bg-gradient-to-br from-blue-500 to-cyan-500",
+          starred: false,
+        },
+        {
+          id: 4,
+          name: "reportmps",
+          source: "GitHub",
+          owner: "aramShim's team",
+          published: "Dec 2, 2024 (6 months ago)",
+          color: "bg-gradient-to-br from-pink-500 to-purple-500",
+          starred: false,
+        },
+        {
+          id: 5,
+          name: "fuji-1",
+          source: "GitHub",
+          owner: "aramShim's team",
+          published: "Apr 12, 2024 (a year ago)",
+          color: "bg-gradient-to-br from-green-400 to-teal-500",
+          starred: false,
+        },
+        {
+          id: 6,
+          name: "upadmin",
+          source: "GitHub",
+          owner: "aramShim's team",
+          published: "Feb 21, 2024 (a year ago)",
+          color: "bg-gradient-to-br from-gray-300 to-gray-500",
+          starred: false,
+        },
+      ];
+
+      let viewMode = "grid";
+      let isSidebarOpen = false;
+
+      // DOM elements
+      const sidebar = document.getElementById("sidebar");
+      const sidebarOverlay = document.getElementById("sidebar-overlay");
+      const openSidebarBtn = document.getElementById("open-sidebar");
+      const closeSidebarBtn = document.getElementById("close-sidebar");
+      const projectsContainer = document.getElementById("projects-container");
+      const listViewBtn = document.getElementById("list-view");
+      const gridViewBtn = document.getElementById("grid-view");
+
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      // Sidebar functionality
+      openSidebarBtn.addEventListener("click", () => {
+        isSidebarOpen = true;
+        sidebar.classList.add("translate-x-0");
+        sidebar.classList.remove("-translate-x-full");
+        sidebarOverlay.classList.remove("hidden");
+      });
+
+      closeSidebarBtn.addEventListener("click", closeSidebar);
+      sidebarOverlay.addEventListener("click", closeSidebar);
+
+      function closeSidebar() {
+        isSidebarOpen = false;
+        sidebar.classList.add("-translate-x-full");
+        sidebar.classList.remove("translate-x-0");
+        sidebarOverlay.classList.add("hidden");
+      }
+
+      // View mode functionality
+      listViewBtn.addEventListener("click", () => {
+        viewMode = "list";
+        listViewBtn.classList.add("bg-gray-100");
+        gridViewBtn.classList.remove("bg-gray-100");
+        renderProjects();
+      });
+
+      gridViewBtn.addEventListener("click", () => {
+        viewMode = "grid";
+        gridViewBtn.classList.add("bg-gray-100");
+        listViewBtn.classList.remove("bg-gray-100");
+        renderProjects();
+      });
+
+      // Render projects
+      function renderProjects() {
+        const gridClasses =
+          viewMode === "grid"
+            ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            : "grid-cols-1";
+
+        projectsContainer.className = `grid gap-4 ${gridClasses}`;
+
+        projectsContainer.innerHTML = projects
+          .map(
+            (project) => `
+                <div class="bg-white rounded-lg border border-gray-200 hover:border-gray-300 transition-colors group cursor-pointer">
+                    <div class="p-4">
+                        <!-- Project Image/Icon -->
+                        <div class="w-full h-20 ${
+                          project.color
+                        } rounded-md mb-4 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-transparent to-black/20"></div>
+                            <span class="text-white font-bold text-lg relative z-10">
+                                ${project.name.charAt(0).toUpperCase()}
+                            </span>
+                        </div>
+
+                        <!-- Project Info -->
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-semibold text-gray-900 truncate">${
+                                  project.name
+                                }</h3>
+                                <div class="flex items-center space-x-1">
+                                    ${
+                                      project.starred
+                                        ? '<i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>'
+                                        : ""
+                                    }
+                                    <button class="opacity-0 group-hover:opacity-100 transition-opacity star-btn" data-project-id="${
+                                      project.id
+                                    }">
+                                        <i data-lucide="star" class="w-4 h-4 text-gray-400 hover:text-yellow-400"></i>
+                                    </button>
+                                    <i data-lucide="external-link" class="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </div>
+                            </div>
+                            
+                            <p class="text-sm text-gray-500">Deploys from ${
+                              project.source
+                            }</p>
+                            
+                            <div class="pt-2 border-t border-gray-100">
+                                <p class="text-xs text-gray-500">Owned by <span class="font-medium">${
+                                  project.owner
+                                }</span></p>
+                                <p class="text-xs text-gray-500 mt-1">Published on ${
+                                  project.published
+                                }</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `,
+          )
+          .join("");
+
+        // Re-initialize Lucide icons for newly created elements
+        lucide.createIcons();
+
+        // Add star button functionality
+        document.querySelectorAll(".star-btn").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const projectId = parseInt(btn.dataset.projectId);
+            const project = projects.find((p) => p.id === projectId);
+            if (project) {
+              project.starred = !project.starred;
+              renderProjects();
+            }
+          });
+        });
+      }
+
+      // Initial render
+      renderProjects();
+
+      // Handle window resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1024 && isSidebarOpen) {
+          closeSidebar();
+        }
+      });
+    </script>
+  </body>
+</html>
