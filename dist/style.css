@@ -1,0 +1,16 @@
+.secondary-nav-container {
+  --start: #defffe;
+  --first: #edf4ff;
+  --end: #f6f9fd;
+
+  /* background: radial-gradient(
+    16rem 100% at 6.64% 0,
+    var(--start) 0,
+    var(--first) 42.5%,
+    var(--end) 100%
+  ); */
+
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+  border-radius: 0.75rem;
+  transition: all 0.25s ease-in-out;
+}

@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../../variants.css";
+
+html,
+body,
+code,
+kbd,
+samp,
+pre {
+  font-family: "Pretendard", sans-serif;
+}
+.secondary-nav-container {
+  /* --start: #defffe;
+  --first: #edf4ff;
+  --end: #f6f9fd; */
+  --start: #cbffe2;
+  --first: #edffff;
+  --end: #fffed7;
+  /* background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%); */
+  /* background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%); */
+  background: radial-gradient(
+    20rem 100% at 10% 0,
+    var(--start) 0,
+    /* var(--first) 42.5%, */ var(--end) 100%
+  );
+  border-radius: 0.75rem;
+  transition: all 0.25s ease-in-out;
+}
