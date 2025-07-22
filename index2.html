@@ -57,9 +57,7 @@
     <link rel="stylesheet" href="src/css/input.css" />
     <link rel="stylesheet" href="src/css/pretendard.css" />
   </head>
-  <body
-    class="hs-overlay-body-open hs-overlay-body-open:overflow-hidden dark:bg-neutral-900"
-  >
+  <body class="min-h-screen">
     <div class="min-h-screen flex items-start">
       <!-- Mobile Sidebar Overlay -->
       <div
@@ -69,11 +67,8 @@
 
       <!-- Sidebar -->
       <div
-        id="hs-application-sidebar"
-        class="hs-overlay [--auto-close:lg] hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform h-full hidden fixed inset-y-0 start-0 z-[60] bg-white lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 dark:bg-neutral-800 dark:border-neutral-700 w-64 p-3"
-        role="dialog"
-        tabindex="-1"
-        aria-label="Sidebar"
+        id="sidebar"
+        class="hs-overlay [--auto-close:lg] fixed lg:sticky inset-y-0 left-0 z-50 w-64 bg-white transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out p-3 lg:h-screen hs-overlay-open:translate-x-0"
       >
         <div class="flex flex-col h-full secondary-nav-container">
           <!-- sidebar-header -->
@@ -88,31 +83,31 @@
           <!-- Navigation -->
           <nav class="flex-1 p-4 space-y-1">
             <button
-              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors bg-white text-green-600 border-r-2 border-green-400"
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors bg-green-50 text-green-600 border-r-2 border-green-500"
             >
               <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
               <span>Summary</span>
             </button>
             <button
-              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-white hover:text-green-600"
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900"
             >
               <i data-lucide="chart-pie" class="w-4 h-4"></i>
               <span>Analysis</span>
             </button>
             <button
-              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-white hover:text-green-600"
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900"
             >
               <i data-lucide="receipt-text" class="w-4 h-4"></i>
               <span>Statement</span>
             </button>
             <button
-              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-white hover:text-green-600"
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900"
             >
               <i data-lucide="globe" class="w-4 h-4"></i>
               <span>Overview</span>
             </button>
             <button
-              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-white hover:text-green-600"
+              class="nav-item w-full flex items-center space-x-3 px-3 py-2 text-sm rounded-md transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900"
             >
               <i data-lucide="mail" class="w-4 h-4"></i>
               <span>Contacts</span>
@@ -173,11 +168,11 @@
       </div>
 
       <!-- Main Content -->
-      <div class="flex-1 flex flex-col w-full lg:ps-64">
+      <div class="flex-1 flex flex-col min-w-0">
         <!-- Top Header -->
-        <header class="bg-white px-4 lg:px-6 py-6">
+        <header class="bg-white px-4 lg:px-6 py-4">
           <div class="flex items-center justify-between">
-            <div class="flex items-center gap-x-4 lg:gap-x-0">
+            <div class="flex items-center space-x-4">
               <button
                 type="button"
                 class="lg:hidden flex justify-center items-center gap-x-3 size-8 text-sm text-gray-600 hover:bg-gray-100 rounded-full disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 dark:hover:text-neutral-200 dark:focus:text-neutral-200"
@@ -185,11 +180,11 @@
                 aria-expanded="false"
                 aria-controls="hs-sidebar-content-push"
                 aria-label="Toggle navigation"
-                data-hs-overlay="#hs-application-sidebar"
+                data-hs-overlay="#sidebar"
               >
                 <i data-lucide="menu" class="w-5 h-5 text-gray-600"></i>
               </button>
-              <h1 class="text-xl font-semibold text-gray-900">Summary</h1>
+              <h1 class="text-xl font-semibold text-gray-900"></h1>
             </div>
             <div class="flex items-center space-x-4">
               <button class="text-sm text-gray-600 hover:text-gray-900">
@@ -204,8 +199,10 @@
 
         <!-- Content -->
         <main class="flex-1 px-4 lg:px-6 pb-6">
-          <div class="h-full py-2">
-            <div class="space-y-4 sm:space-y-6">
+          <div
+            class="h-full h-full overflow-x-auto [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500"
+          >
+            <div class="p-4 sm:p-6 space-y-4 sm:space-y-6">
               <!-- Grid -->
               <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 <!-- Card -->
@@ -2511,16 +2508,6 @@
             });
           </script>
         </main>
-
-        <!-- Footer-->
-        <footer class="w-full px-6 py-4 mt-auto">
-          <div class="flex w-full items-center justify-between">
-            <p class="text-gray-400 text-xs dark:text-neutral-500">
-              © 1998-2025 FUJIPACIFIC. ALL RIGHTS RESERVED.
-            </p>
-          </div>
-        </footer>
-        <!-- End Footer -->
       </div>
     </div>
 

@@ -10,6 +10,7 @@
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
+    "@preline/toggle-password": "^3.1.0",
     "preline": "^3.1.0"
   }
 }
