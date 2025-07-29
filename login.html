@@ -110,47 +110,14 @@
                                 }'
                     class="flex items-center px-3 cursor-pointer text-gray-400 rounded-e-md focus:outline-hidden focus:text-teal-600 dark:text-neutral-600 dark:focus:text-teal-500"
                   >
-                    <svg
-                      class="shrink-0 size-4"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        class="hs-password-active:hidden"
-                        d="M9.88 9.88a3 3 0 1 0 4.24 4.24"
-                      ></path>
-                      <path
-                        class="hs-password-active:hidden"
-                        d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"
-                      ></path>
-                      <path
-                        class="hs-password-active:hidden"
-                        d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"
-                      ></path>
-                      <line
-                        class="hs-password-active:hidden"
-                        x1="2"
-                        x2="22"
-                        y1="2"
-                        y2="22"
-                      ></line>
-                      <path
-                        class="hidden hs-password-active:block"
-                        d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"
-                      ></path>
-                      <circle
-                        class="hidden hs-password-active:block"
-                        cx="12"
-                        cy="12"
-                        r="3"
-                      ></circle>
-                    </svg>
+                    <i
+                      data-lucide="eye"
+                      class="hidden hs-password-active:block shrink-0 size-4"
+                    ></i>
+                    <i
+                      data-lucide="eye-off"
+                      class="hs-password-active:hidden shrink-0 size-4"
+                    ></i>
                   </button>
                   <svg
                     class="error-icon hidden shrink-0 size-4 text-red-500 mr-3"
@@ -236,27 +203,35 @@
               data-hs-overlay="#hs-scale-animation-modal"
             >
               <span class="sr-only">Close</span>
-              <svg
-                class="shrink-0 size-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M18 6 6 18"></path>
-                <path d="m6 6 12 12"></path>
-              </svg>
+              <i data-lucide="X" class="shrink-0 size-4"></i>
             </button>
           </div>
           <div class="p-4 overflow-y-auto">
             <div class="flex flex-col max-h-[50vh]">
-              <p class="text-sm">FUJIPACIFIC 개발팀에 문의해주세요.</p>
+              <p class="text-sm">
+                FUJIPACIFIC에 가입된 이메일로 인증메일을 발송합니다.
+              </p>
             </div>
+          </div>
+          <div
+            class="flex justify-end items-center gap-x-2 py-3 px-4 dark:border-neutral-700"
+            id="modal-footer"
+          >
+            <button
+              type="button"
+              class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+              data-hs-overlay="#hs-scale-animation-modal"
+              aria-expanded="true"
+            >
+              취소
+            </button>
+            <button
+              type="button"
+              class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-teal-600 text-white hover:bg-teal-700 focus:outline-none focus:bg-teal-700 disabled:opacity-50 disabled:pointer-events-none"
+              onclick=""
+            >
+              확인
+            </button>
           </div>
         </div>
       </div>

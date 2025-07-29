@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="fuji pacific 한국 사이트." />
+
+    <title>Fujipacific</title>
+
+    <!--<script src="https://cdn.jsdelivr.net/npm/preline@2.0.3/dist/preline.js"></script> -->
+
+    <!-- Theme Check and Update -->
+    <script>
+      const html = document.querySelector("html")
+      const isLightOrAuto =
+        localStorage.getItem("hs_theme") === "light" ||
+        (localStorage.getItem("hs_theme") === "auto" && !window.matchMedia("(prefers-color-scheme: dark)").matches)
+      const isDarkOrAuto =
+        localStorage.getItem("hs_theme") === "dark" ||
+        (localStorage.getItem("hs_theme") === "auto" && window.matchMedia("(prefers-color-scheme: dark)").matches)
+
+      if (isLightOrAuto && html.classList.contains("dark")) html.classList.remove("dark")
+      else if (isDarkOrAuto && html.classList.contains("light")) html.classList.remove("light")
+      else if (isDarkOrAuto && !html.classList.contains("dark")) html.classList.add("dark")
+      else if (isLightOrAuto && !html.classList.contains("light")) html.classList.add("light")
+    </script>
+    <!-- Apexcharts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts/dist/apexcharts.css" />
+    <style type="text/css">
+      .apexcharts-tooltip.apexcharts-theme-light {
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+    </style>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS HS -->
+    <link rel="stylesheet" href="/dist/output.css" />
+    <link rel="stylesheet" href="src/css/input.css" />
+    <link rel="stylesheet" href="src/css/pretendard.css" />
+  </head>
+  <body class="hs-overlay-body-open hs-overlay-body-open:overflow-hidden dark:bg-neutral-900">
+    <div class="min-h-screen flex items-start">
+      <!-- Mobile Sidebar Overlay -->
+      <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden hidden"></div>
+
+      <!-- Sidebar -->
+      <div
+        id="hs-application-sidebar"
+        class="hs-overlay [--auto-close:lg] hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform h-full hidden fixed inset-y-0 start-0 z-[60] bg-white lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 dark:bg-neutral-800 dark:border-neutral-700 w-64 p-3"
+        role="dialog"
+        tabindex="-1"
+        aria-label="Sidebar">
+        <div class="flex flex-col h-full secondary-nav-container">
+          <!-- sidebar-header -->
+          <div class="p-4 py-6">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-2">
+                <img src="/src/images/logo3.svg" alt="" class="w-[80%]" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <nav class="flex-1 p-4 space-y-1">
+            <button
+              class="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm rounded-lg hover:bg-white hover:text-green-600 focus:outline-none focus:text-green-600 focus:bg-white rounded-lg text-green-600 bg-white border-r-2 border-green-400">
+              <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+              <span>Summary</span>
+            </button>
+            <button
+              class="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-600 rounded-lg hover:bg-white hover:text-green-600 focus:outline-none focus:text-green-600 focus:bg-white rounded-md text-sm">
+              <i data-lucide="chart-pie" class="w-4 h-4"></i>
+              <span>Analysis</span>
+            </button>
+            <button
+              class="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-600 rounded-lg hover:bg-white hover:text-green-600 focus:outline-none focus:text-green-600 focus:bg-white rounded-md text-sm">
+              <i data-lucide="receipt-text" class="w-4 h-4"></i>
+              <span>Statement</span>
+            </button>
+            <button
+              class="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-600 rounded-lg hover:bg-white hover:text-green-600 focus:outline-none focus:text-green-600 focus:bg-white rounded-md text-sm">
+              <i data-lucide="globe" class="w-4 h-4"></i>
+              <span>Overview</span>
+            </button>
+            <button
+              class="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-600 rounded-lg hover:bg-white hover:text-green-600 focus:outline-none focus:text-green-600 focus:bg-white rounded-md text-sm">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <span>Contacts</span>
+            </button>
+            <div class="hs-accordion" id="system-accordion">
+              <button
+                class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-600 rounded-lg hover:bg-white hover:text-green-600 focus:outline-none focus:text-green-600 focus:bg-white rounded-md text-sm ">
+                <i data-lucide="user-star" class="w-4 h-4"></i>
+                <span>System</span>
+                <i data-lucide="chevron-up" class="hs-accordion-active:block ms-auto hidden size-4"></i>
+                <i data-lucide="chevron-down" class="hs-accordion-active:hidden ms-auto block size-4"></i>
+              </button>
+              <div id="system-accordion-child" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden" role="region" aria-labelledby="system-accordion">
+                <ul class="ps-6 pt-1 space-y-1">
+                  <li>
+                    <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-600 rounded-lg hover:bg-white focus:outline-hidden focus:bg-white dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 dark:text-neutral-200" href="#">
+                      User Management
+                    </a>
+                  </li>
+                  <li>
+                    <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-600 rounded-lg hover:bg-white focus:outline-hidden focus:bg-white dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 dark:text-neutral-200" href="#">
+                      Statement E-mail
+                    </a>
+                  </li>
+                  <li>
+                    <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-600 rounded-lg hover:bg-white focus:outline-hidden focus:bg-white dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 dark:text-neutral-200" href="#">
+                      Registration E-mail
+                    </a>
+                  </li>
+                  <li>
+                    <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-600 rounded-lg hover:bg-white focus:outline-hidden focus:bg-white dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 dark:text-neutral-200" href="#">
+                     E-mail History
+                    </a>
+                  </li>
+                  <li>
+                    <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-600 rounded-lg hover:bg-white focus:outline-hidden focus:bg-white dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 dark:text-neutral-200" href="#">
+                     Crawling
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <!-- nav-Footer -->
+          <div class="p-4 border-t border-gray-200">
+            <div class="hs-dropdown [--auto-close:inside] relative flex z-40">
+              <!-- Project Button -->
+              <button
+                id="hs-pro-dnwpd"
+                type="button"
+                class="group w-full flex items-center py-1 gap-x-2"
+                aria-haspopup="menu"
+                aria-expanded="false"
+                aria-label="Dropdown">
+                <div class="w-6 h-6 bg-lime-400 rounded-full flex items-center justify-center">
+                  <span class="text-white text-xs">홍</span>
+                </div>
+                <span class="text-xs text-gray-700">geo890@gmail.com</span>
+              </button>
+              <div
+                class="hs-dropdown-menu hs-dropdown-open:opacity-100 transition-[opacity,margin] duration opacity-0 rounded-xl w-4/5 shadow-[0_10px_40px_10px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_40px_10px_rgba(0,0,0,0.2)] dark:bg-neutral-700 hidden z-40 bg-white"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="hs-pro-dnwpd">
+                <div class="py-3 px-5 bg-gray-100 rounded-t-lg dark:bg-neutral-700">
+                  <p class="text-sm font-medium text-gray-800 dark:text-neutral-200">홍길동님</p>
+                  <p class="text-xs text-gray-500 dark:text-neutral-500">geo890@gmail.com</p>
+                </div>
+
+                <div class="p-1.5 space-y-0.5">
+                  <a href="mypage.html" class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
+                    <i data-lucide="user-cog" class="shrink-0 size-4"></i>
+                    마이페이지
+                  </a>
+                  <button type="button" class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
+                      <i data-lucide="log-out" class="shrink-0 size-4"></i>
+                      로그아웃
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-1 flex flex-col w-full lg:ps-64">
+        <!-- Top Header -->
+        <header class="bg-white px-4 lg:px-6 py-6 sticky top-0 inset-x-0 z-30 dark:bg-neutral-800">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-x-4 lg:gap-x-0">
+              <button
+                type="button"
+                class="lg:hidden flex justify-center items-center gap-x-3 size-8 text-sm text-gray-600 hover:bg-gray-100 rounded-full disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 dark:hover:text-neutral-200 dark:focus:text-neutral-200"
+                aria-haspopup="dialog"
+                aria-expanded="false"
+                aria-controls="hs-sidebar-content-push"
+                aria-label="Toggle navigation"
+                data-hs-overlay="#hs-application-sidebar">
+                <i data-lucide="menu" class="w-5 h-5 text-gray-600"></i>
+              </button>
+              <h1 class="text-xl font-semibold text-gray-900">My page</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+    
+              <!-- Dropdown -->
+              <div class="hs-dropdown [--placement:bottom-right] relative inline-flex">
+                <button id="hs-dropdown-user" type="button" class="inline-flex justify-center items-center gap-x-2 text-sm rounded-full text-gray-600 hover:text-gray-800 focus:outline-none disabled:opacity-50 disabled:pointer-events-none dark:text-white"
+                  aria-haspopup="menu"
+                  aria-expanded="false"
+                  aria-label="Dropdown">
+                  <i data-lucide="circle-user-round" class="shrink-0 size-6"></i>
+                </button>
+
+                <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-user">
+                  <div class="py-3 px-5 bg-gray-100 rounded-t-lg dark:bg-neutral-700">
+                    <p class="text-sm font-medium text-gray-800 dark:text-neutral-200">홍길동님</p>
+                    <p class="text-xs text-gray-500 dark:text-neutral-500">geo890@gmail.com</p>
+                  </div>
+                  <div class="p-1.5 space-y-0.5">
+                    <a href="mypage.html" class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
+                      <i data-lucide="user-cog" class="shrink-0 size-4"></i>
+                      마이페이지
+                    </a>
+                    <button type="button" class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
+                      <i data-lucide="log-out" class="shrink-0 size-4"></i>
+                      로그아웃
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- End Dropdown -->
+            </div>
+          </div>
+        </header>
+
+        <!-- Content -->
+        <main class="flex-1 px-4 lg:px-6 pb-6">
+          <div class="h-full py-2">
+
+          </div>
+
+        </main>
+
+        <!-- Footer-->
+        <footer class="w-full px-6 py-4 mt-auto">
+          <div class="flex w-full items-center justify-between">
+            <p class="text-gray-400 text-xs dark:text-neutral-500">© 1998-2025 FUJIPACIFIC. ALL RIGHTS RESERVED.</p>
+          </div>
+        </footer>
+        <!-- End Footer -->
+      </div>
+    </div>
+
+    <!--footer-->
+
+    <!-- JS PLUGINS -->
+    <script src="https://cdn.jsdelivr.net/npm/preline@latest/dist/preline.min.js" crossorigin="anonymous" defer></script>
+
+    <!-- Apexcharts -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/helper-apexcharts.js"></script>
+
+    <script>
+      window.addEventListener("load", () => {
+        lucide.createIcons()
+        window.HSStaticMethods.autoInit()
+      })
+    </script>
+  </body>
+</html>
