@@ -794,10 +794,6 @@ video {
   margin-top: 0.25rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1034,10 +1030,6 @@ video {
 
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-sm {
-  max-width: 24rem;
 }
 
 .flex-1 {
@@ -1678,11 +1670,6 @@ video {
   color: rgb(220 38 38 / var(--tw-text-opacity, 1));
 }
 
-.text-red-700 {
-  --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity, 1));
-}
-
 .text-red-800 {
   --tw-text-opacity: 1;
   color: rgb(153 27 27 / var(--tw-text-opacity, 1));
@@ -1758,10 +1745,6 @@ video {
 
 .outline-gray-300 {
   outline-color: #d1d5db;
-}
-
-.outline-red-300 {
-  outline-color: #fca5a5;
 }
 
 .blur {
@@ -1870,16 +1853,6 @@ pre {
   color: rgb(156 163 175 / var(--tw-text-opacity, 1));
 }
 
-.placeholder\:text-red-400::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(248 113 113 / var(--tw-text-opacity, 1));
-}
-
-.placeholder\:text-red-400::placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(248 113 113 / var(--tw-text-opacity, 1));
-}
-
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -1938,11 +1911,6 @@ pre {
 .hover\:border-gray-500:hover {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity, 1));
-}
-
-.hover\:bg-blue-500:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-blue-700:hover {
@@ -2048,11 +2016,6 @@ pre {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.focus\:text-blue-600:focus {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity, 1));
-}
-
 .focus\:text-gray-600:focus {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity, 1));
@@ -2085,10 +2048,6 @@ pre {
   outline-offset: -2px;
 }
 
-.focus\:outline-blue-600:focus {
-  outline-color: #2563eb;
-}
-
 .focus\:outline-teal-600:focus {
   outline-color: #0d9488;
 }
@@ -2109,10 +2068,6 @@ pre {
 
 .focus-visible\:outline-offset-2:focus-visible {
   outline-offset: 2px;
-}
-
-.focus-visible\:outline-blue-600:focus-visible {
-  outline-color: #2563eb;
 }
 
 .focus-visible\:outline-teal-600:focus-visible {
@@ -2636,11 +2591,6 @@ pre {
   .dark\:focus\:bg-neutral-800:focus {
     --tw-bg-opacity: 1;
     background-color: rgb(38 38 38 / var(--tw-bg-opacity, 1));
-  }
-
-  .dark\:focus\:text-blue-500:focus {
-    --tw-text-opacity: 1;
-    color: rgb(59 130 246 / var(--tw-text-opacity, 1));
   }
 
   .dark\:focus\:text-neutral-200:focus {
