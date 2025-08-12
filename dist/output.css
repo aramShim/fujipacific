@@ -690,10 +690,6 @@ video {
   top: 100%;
 }
 
-.z-10 {
-  z-index: 10;
-}
-
 .z-20 {
   z-index: 20;
 }
@@ -1315,8 +1311,28 @@ video {
   border-color: rgb(64 64 64 / var(--tw-border-opacity, 1));
 }
 
+.border-teal-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(45 212 191 / var(--tw-border-opacity, 1));
+}
+
 .border-transparent {
   border-color: transparent;
+}
+
+.border-orange-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(251 146 60 / var(--tw-border-opacity, 1));
+}
+
+.border-violet-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(167 139 250 / var(--tw-border-opacity, 1));
+}
+
+.border-blue-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(96 165 250 / var(--tw-border-opacity, 1));
 }
 
 .border-t-transparent {
@@ -1358,11 +1374,6 @@ video {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
 }
 
-.bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
-}
-
 .bg-gray-900\/50 {
   background-color: rgb(17 24 39 / 0.5);
 }
@@ -1382,6 +1393,11 @@ video {
   background-color: rgb(204 251 241 / var(--tw-bg-opacity, 1));
 }
 
+.bg-teal-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(45 212 191 / var(--tw-bg-opacity, 1));
+}
+
 .bg-teal-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(13 148 136 / var(--tw-bg-opacity, 1));
@@ -1395,6 +1411,21 @@ video {
 .bg-yellow-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 249 195 / var(--tw-bg-opacity, 1));
+}
+
+.bg-orange-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 146 60 / var(--tw-bg-opacity, 1));
+}
+
+.bg-violet-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(167 139 250 / var(--tw-bg-opacity, 1));
+}
+
+.bg-blue-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-50 {
@@ -1695,6 +1726,16 @@ video {
   color: rgb(133 77 14 / var(--tw-text-opacity, 1));
 }
 
+.text-orange-600 {
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity, 1));
+}
+
+.text-violet-600 {
+  --tw-text-opacity: 1;
+  color: rgb(124 58 237 / var(--tw-text-opacity, 1));
+}
+
 .decoration-2 {
   text-decoration-thickness: 2px;
 }
@@ -1782,12 +1823,6 @@ video {
   transition-duration: 150ms;
 }
 
-.transition-opacity {
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .duration-200 {
   transition-duration: 200ms;
 }
@@ -1826,18 +1861,67 @@ pre {
 }
 
 .secondary-nav-container {
-  /* --start: #defffe;
-  --first: #edf4ff;
-  --end: #f6f9fd; */
+  /*green - lime*/
   --start: #cbffe2;
   --first: #edffff;
   --end: #fffed7;
-  /* background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%); */
-  /* background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%); */
   background: radial-gradient(
     20rem 100% at 10% 0,
     var(--start) 0,
-    /* var(--first) 42.5%, */ var(--end) 100%
+     /*var(--first) 42.5%, */ var(--end) 100%
+  );
+  border-radius: 0.75rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.secondary-nav-container-mint {
+  /*mint-purple*/
+  --start: #d8fdf2;
+  --first: #f0fffa;
+  --end: #fff4fd;
+  background: radial-gradient(
+    20rem 100% at 10% 0,
+    var(--start) 0,
+     var(--first) 42.5%,  var(--end) 100%
+  );
+  border-radius: 0.75rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.secondary-nav-container-blue {
+  --start: #defffe;
+  --first: #edf4ff;
+  --end: #f6f9fd;
+  background: radial-gradient(
+    20rem 100% at 10% 0,
+    var(--start) 0,
+     var(--first) 42.5%,  var(--end) 100%
+  );
+  border-radius: 0.75rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.secondary-nav-container-purple {
+  --start: #fce4f7;
+  --first: #fdcbf1;
+  --end: #e7d7ee;
+  background: radial-gradient(
+    20rem 100% at 10% 0,
+    var(--start) 0,
+     var(--first) 42.5%,  var(--end) 100%
+  );
+  border-radius: 0.75rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.secondary-nav-container-orange {
+  --start: #ffb9c5;
+  --first: #fdd6bd;
+  --end: #fce8db;
+  background: radial-gradient(
+    20rem 100% at 10% 0,
+    var(--start) 0,
+     var(--first) 42.5%,  var(--end) 100%
   );
   border-radius: 0.75rem;
   transition: all 0.25s ease-in-out;
@@ -1968,6 +2052,26 @@ pre {
   color: rgb(20 184 166 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-teal-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(13 148 136 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-orange-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-violet-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(124 58 237 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-blue-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity, 1));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -1984,6 +2088,26 @@ pre {
 .focus\:border-green-400:focus {
   --tw-border-opacity: 1;
   border-color: rgb(74 222 128 / var(--tw-border-opacity, 1));
+}
+
+.focus\:border-teal-400:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(45 212 191 / var(--tw-border-opacity, 1));
+}
+
+.focus\:border-orange-400:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(251 146 60 / var(--tw-border-opacity, 1));
+}
+
+.focus\:border-violet-400:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(167 139 250 / var(--tw-border-opacity, 1));
+}
+
+.focus\:border-blue-400:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(96 165 250 / var(--tw-border-opacity, 1));
 }
 
 .focus\:bg-blue-700:focus {
@@ -2029,6 +2153,21 @@ pre {
 .focus\:text-teal-600:focus {
   --tw-text-opacity: 1;
   color: rgb(13 148 136 / var(--tw-text-opacity, 1));
+}
+
+.focus\:text-orange-600:focus {
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity, 1));
+}
+
+.focus\:text-violet-600:focus {
+  --tw-text-opacity: 1;
+  color: rgb(124 58 237 / var(--tw-text-opacity, 1));
+}
+
+.focus\:text-blue-600:focus {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity, 1));
 }
 
 .focus\:underline:focus {
@@ -2095,22 +2234,6 @@ pre {
 }
 
 .hs-dropdown-menu.open.hs-dropdown-open\:opacity-100 {
-  opacity: 1;
-}
-
-.hs-tooltip.show .hs-tooltip-shown\:visible {
-  visibility: visible;
-}
-
-.hs-tooltip.show .hs-tooltip-shown\:opacity-100 {
-  opacity: 1;
-}
-
-.hs-tooltip-content.show.hs-tooltip-shown\:visible {
-  visibility: visible;
-}
-
-.hs-tooltip-content.show.hs-tooltip-shown\:opacity-100 {
   opacity: 1;
 }
 
@@ -2664,3 +2787,5 @@ pre {
 .\[\&\:\:-webkit-scrollbar\]\:w-2::-webkit-scrollbar {
   width: 0.5rem;
 }
+
+
