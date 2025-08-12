@@ -29,6 +29,12 @@ pre {
   border-radius: 0.75rem;
   transition: all 0.25s ease-in-out;
 }
+.background-color {background: #fffff6}
+.background-color-purple {background-color: #fff7ff}
+.background-color-orange {background-color:#fff8f4}
+.background-color-mint {background-color:#fafafa}
+.background-color-blue {background-color:#fafafa}
+
 .secondary-nav-container-mint {
   /*mint-purple*/
   --start: #d8fdf2;

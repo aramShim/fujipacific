@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="src/css/input.css" />
     <link rel="stylesheet" href="src/css/pretendard.css" />
   </head>
-  <body class="hs-overlay-body-open hs-overlay-body-open:overflow-hidden dark:bg-neutral-900">
+  <body class="hs-overlay-body-open hs-overlay-body-open:overflow-hidden dark:bg-neutral-900 background-color-purple" >
     <div class="min-h-screen flex items-start">
       <!-- Mobile Sidebar Overlay -->
       <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden hidden"></div>
@@ -47,11 +47,11 @@
       <!-- Sidebar -->
       <div
         id="hs-application-sidebar"
-        class="hs-overlay [--auto-close:lg] hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform h-full hidden fixed inset-y-0 start-0 z-[60] bg-white lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 dark:bg-neutral-800 dark:border-neutral-700 w-64 p-3"
+        class="hs-overlay [--auto-close:lg] hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform h-full hidden fixed inset-y-0 start-0 z-[60] bg-white lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 dark:bg-neutral-800 dark:border-neutral-700 w-64 p-3 background-color-purple"
         role="dialog"
         tabindex="-1"
-        aria-label="Sidebar">
-        <div class="flex flex-col h-full secondary-nav-container-purple overflow-y-auto">
+        aria-label="Sidebar" >
+        <div class="flex flex-col h-full secondary-nav-container-purple overflow-y-auto shadow-md">
           <!-- sidebar-header -->
           <div class="p-4 py-6">
             <div class="flex items-center justify-between">
@@ -175,7 +175,7 @@
       <!-- Main Content -->
       <div class="flex-1 flex flex-col w-full lg:ps-64">
         <!-- Top Header -->
-        <header class="bg-white px-4 lg:px-6 py-6 sticky top-0 inset-x-0 z-30 dark:bg-neutral-800">
+        <header class="bg-white px-4 lg:px-6 py-6 sticky top-0 inset-x-0 z-30 dark:bg-neutral-800 background-color-purple"  >
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-x-4 lg:gap-x-0">
               <button
