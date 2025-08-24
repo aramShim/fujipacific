@@ -37,104 +37,45 @@
   <body class="h-full bg-white">
     <div class="flex min-h-screen flex-col justify-center px-6 py-12 lg:px-8">
       <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-        <img
-          class="mx-auto h-16 w-auto"
-          src="/src/images/logo.svg"
-          alt="FUJIPACIFIC"
-        />
+        <img class="mx-auto h-16 w-auto" src="/src/images/logo.svg" alt="FUJIPACIFIC"/>
       </div>
       <div class="mt-4 sm:mx-auto sm:w-full sm:max-w-sm">
         <form name="frm" id="frm" class="space-y-6" method="post" action="">
           <input type="hidden" name="mode" value="login" />
           <div>
-            <label
-              for="email"
-              class="block text-sm/6 font-medium text-gray-900"
-            >
+            <label for="id" class="block text-sm/6 font-medium text-gray-900" >
               ID
             </label>
             <div class="mt-2">
-              <input
-                type="text"
-                id="id"
-                name="id"
-                minlength
-                mexlength
-                required
-                class="outline block w-full rounded-lg bg-white px-3 py-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-teal-600 sm:text-sm/6"
-              />
+              <input  type="text" id="id" name="id" required class="outline block w-full rounded-lg bg-white px-3 py-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6" />
             </div>
           </div>
 
           <div>
             <div class="flex items-center justify-between">
-              <label
-                for="password"
-                class="block text-sm/6 font-medium text-gray-900"
-              >
+              <label for="password" class="block text-sm/6 font-medium text-gray-900">
                 Password
               </label>
-
               <div class="text-sm">
-                <button
-                  type="button"
-                  class="font-semibold text-teal-600 hover:text-teal-500"
-                  aria-haspopup="dialog"
-                  aria-expanded="false"
-                  aria-controls="hs-scale-animation-modal"
-                  data-hs-overlay="#hs-scale-animation-modal"
-                >
+                <button type="button" class="font-semibold text-blue-600 hover:text-blue-500" aria-haspopup="dialog"
+                  aria-expanded="false" aria-controls="hs-scale-animation-modal" data-hs-overlay="#hs-scale-animation-modal">
                   비밀번호를 잊으셨나요?
                 </button>
               </div>
             </div>
             <div class="mt-2">
               <div class="relative mt-2">
-                <input
-                  id="password"
-                  type="password"
-                  name="password"
-                  class="outline block w-full rounded-lg bg-white px-3 py-3 text-base text-gray-700 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-teal-600 sm:text-sm/6"
-                  placeholder="비밀번호"
-                  value=""
-                  required
-                  current-password
-                  minlength
-                  mexlength
-                />
+                <input id="password" type="password" name="password" class="outline block w-full rounded-lg bg-white px-3 py-3 text-base text-gray-700 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6" placeholder="비밀번호" value="" required current-password/>
                 <div class="flex items-center absolute inset-y-0 end-0 z-20">
                   <button
                     type="button"
-                    data-hs-toggle-password='{
-                                    "target": "#password"
-                                }'
-                    class="flex items-center px-3 cursor-pointer text-gray-400 rounded-e-md focus:outline-hidden focus:text-teal-600 dark:text-neutral-600 dark:focus:text-teal-500"
+                    data-hs-toggle-password='{"target": "#password"}'
+                    class="flex items-center px-3 cursor-pointer text-gray-400 rounded-e-md focus:outline-hidden focus:text-blue-600 dark:text-neutral-600 dark:focus:text-blue-500"
                   >
-                    <i
-                      data-lucide="eye"
-                      class="hidden hs-password-active:block shrink-0 size-4"
-                    ></i>
-                    <i
-                      data-lucide="eye-off"
-                      class="hs-password-active:hidden shrink-0 size-4"
-                    ></i>
+                    <i data-lucide="eye" class="hidden hs-password-active:block shrink-0 size-4"></i>
+                    <i data-lucide="eye-off" class="hs-password-active:hidden shrink-0 size-4"></i>
                   </button>
-                  <svg
-                    class="error-icon hidden shrink-0 size-4 text-red-500 mr-3"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" x2="12" y1="8" y2="12"></line>
-                    <line x1="12" x2="12.01" y1="16" y2="16"></line>
-                  </svg>
+                  
                 </div>
               </div>
             </div>
@@ -142,21 +83,13 @@
 
           <div>
             <div class="flex items-center gap-x-2">
-              <input
-                id="id-save"
-                type="checkbox"
-                class="border border-gray-300 rounded text-teal-600 hover:border-gray-500 focus:ring-teal-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-teal-500 dark:checked:border-teal-500 dark:focus:ring-offset-gray-800"
-              />
+              <input id="id-save" type="checkbox" class="border border-gray-300 rounded text-blue-600 hover:border-gray-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"/>
               <label for="id-save" class="text-sm">아이디 저장</label>
             </div>
           </div>
 
           <div>
-            <button
-              type="submit"
-              class="flex w-full justify-center rounded-lg bg-teal-600 px-3 py-3 text-sm/6 font-semibold text-white shadow-xs hover:bg-teal-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
-              id="loginBtn"
-            >
+            <button type="submit" class="flex w-full justify-center rounded-lg bg-blue-600 px-3 py-3 text-sm/6 font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" id="loginBtn">
               로그인
             </button>
           </div>
@@ -173,19 +106,10 @@
       tabindex="-1"
       aria-labelledby="hs-scale-animation-modal-label"
     >
-      <div
-        class="hs-overlay-animation-target hs-overlay-open:scale-100 hs-overlay-open:opacity-100 scale-95 opacity-0 ease-in-out transition-all duration-200 sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center"
-      >
-        <div
-          class="w-full flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto dark:bg-neutral-800 dark:border-neutral-700 dark:shadow-neutral-700/70"
-        >
-          <div
-            class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700"
-          >
-            <h3
-              id="hs-scale-animation-modal-label"
-              class="font-bold text-gray-800 dark:text-white"
-            >
+      <div class="hs-overlay-animation-target hs-overlay-open:scale-100 hs-overlay-open:opacity-100 scale-95 opacity-0 ease-in-out transition-all duration-200 sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
+        <div class="w-full flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto dark:bg-neutral-800 dark:border-neutral-700 dark:shadow-neutral-700/70">
+          <div class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700">
+            <h3 class="font-bold text-gray-800 dark:text-white">
               비밀번호 안내
             </h3>
             <button
@@ -205,10 +129,7 @@
               </p>
             </div>
           </div>
-          <div
-            class="flex justify-end items-center gap-x-2 py-3 px-4 dark:border-neutral-700"
-            id="modal-footer"
-          >
+          <div class="flex justify-end items-center gap-x-2 py-3 px-4 dark:border-neutral-700" id="modal-footer">
             <button
               type="button"
               class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
@@ -217,11 +138,7 @@
             >
               취소
             </button>
-            <button
-              type="button"
-              class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-teal-600 text-white hover:bg-teal-700 focus:outline-none focus:bg-teal-700 disabled:opacity-50 disabled:pointer-events-none"
-              onclick=""
-            >
+            <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" onclick="">
               확인
             </button>
           </div>
