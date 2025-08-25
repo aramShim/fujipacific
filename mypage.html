@@ -2,24 +2,13 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="robots"
-      content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,minimum-scale=1, shrink-to-fit=no, user-scalable=no"
-    />
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, shrink-to-fit=no, user-scalable=no" />
     <meta name="description" content="fuji pacific 한국 사이트." />
-    <!-- iOS 아이콘 설정 -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/images/logo2.png" />
 
     <!-- iOS 상태바 색상 설정 -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
     <!-- Android에서 PWA 기능 활성화 -->
     <meta name="theme-color" content="#ffffff" />
@@ -27,23 +16,10 @@
     <meta name="mobile-web-app-capable" content="yes" />
 
     <!--favicon-->
-    <link rel="apple-touch-icon" sizes="57x57" href="/src/images/favicon/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="/src/images/favicon/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/src/images/favicon/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/src/images/favicon/apple-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/src/images/favicon/apple-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="/src/images/favicon/apple-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/src/images/favicon/apple-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="/src/images/favicon/apple-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/images/favicon/apple-icon-180x180.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/src/images/favicon/android-icon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/src/images/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/src/images/favicon/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/src/images/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="/src/images/favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/src/images/favicon/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/images/favicon_1/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/images/favicon_1/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/images/favicon_1/favicon-16x16.png">
+    <link rel="manifest" href="/src/images/favicon_1/site.webmanifest">
 
     <title>Fujipacific</title>
 
@@ -363,9 +339,59 @@
         </button>
       </div>
       <div class="p-4 overflow-y-auto">
-        <p class="mt-1 text-gray-800 dark:text-neutral-400">
-          This is a wider card with supporting text below as a natural lead-in to additional content.
-        </p>
+        <div>
+          <div class="flex items-center justify-between">
+              <label for="password" class="block text-sm/6 font-medium text-blue-600">New Password</label>
+          </div>
+          
+          <!-- Form Group -->
+          
+          <div class="relative mt-2">
+              <input id="hs-toggle-password" type="password" class="outline block w-full rounded-lg bg-white px-3 py-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6" placeholder="비밀번호" value="" required>
+              <button type="button" data-hs-toggle-password='{
+                  "target": "#hs-toggle-password"
+              }' class="absolute inset-y-0 end-0 flex items-center z-20 px-3 cursor-pointer text-gray-400 rounded-e-md focus:outline-hidden focus:text-blue-600 dark:text-neutral-600 dark:focus:text-blue-500">
+                  <svg class="shrink-0 size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path class="hs-password-active:hidden" d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path>
+                      <path class="hs-password-active:hidden" d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path>
+                      <path class="hs-password-active:hidden" d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path>
+                      <line class="hs-password-active:hidden" x1="2" x2="22" y1="2" y2="22"></line>
+                      <path class="hidden hs-password-active:block" d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                      <circle class="hidden hs-password-active:block" cx="12" cy="12" r="3"></circle>
+                  </svg>
+              </button>
+          </div>
+          
+          <!-- End Form Group -->
+          <div class="relative mt-2">
+              <input id="hs-toggle-password1" type="password" class="outline block w-full rounded-lg bg-white px-3 py-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6" placeholder="비밀번호 확인" value="" required>
+              <div class="flex items-center absolute inset-y-0 end-0 z-20">
+                  <button type="button" data-hs-toggle-password='{
+                      "target": "#hs-toggle-password1"
+                  }' class=" flex items-center px-3 cursor-pointer text-gray-400 rounded-e-md focus:outline-hidden focus:text-blue-600 dark:text-neutral-600 dark:focus:text-blue-500">
+                      <svg class="shrink-0 size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path class="hs-password-active:hidden" d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path>
+                          <path class="hs-password-active:hidden" d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path>
+                          <path class="hs-password-active:hidden" d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path>
+                          <line class="hs-password-active:hidden" x1="2" x2="22" y1="2" y2="22"></line>
+                          <path class="hidden hs-password-active:block" d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                          <circle class="hidden hs-password-active:block" cx="12" cy="12" r="3"></circle>
+                      </svg>
+                  </button>
+                  <i data-lucide="circle-alert" class="error-icon hidden shrink-0 size-4 text-red-500 mr-3"></i>
+
+                  <!-- <svg class="error-icon hidden shrink-0 size-4 text-red-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" x2="12" y1="8" y2="12"></line>
+                      <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                  </svg> -->
+              </div>
+          </div>
+          <div class="hidden error-message mt-2" id="hs-validation-name-error-helper">
+            <p class="flex gap-x-1 items-center text-sm text-red-600"><i data-lucide="circle-alert" class="shrink-0 size-4 text-red-500"></i> 비밀번호를 확인해주세요.</p>
+          </div>
+          
+        </div>
       </div>
       <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t border-gray-200 dark:border-neutral-700">
         <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" data-hs-overlay="#changePassword">
@@ -392,6 +418,55 @@
       window.addEventListener("load", () => {
         lucide.createIcons();
         window.HSStaticMethods.autoInit();
+      });
+    </script>
+    <script>
+      // 비밀번호 확인 검증 함수
+      function validatePassword() {
+          const password = document.getElementById('hs-toggle-password').value;
+          const confirmPassword = document.getElementById('hs-toggle-password1').value;
+          const confirmInput = document.getElementById('hs-toggle-password1');
+          const errorIcon = document.querySelector('.error-icon');
+          const errorMessage = document.querySelector('.error-message');
+
+          // 비밀번호가 입력되었고, 확인 비밀번호도 입력되었을 때만 검증
+          if (password && confirmPassword) {
+              if (password !== confirmPassword) {
+                  // 비밀번호가 다를 때
+                  confirmInput.classList.remove('outline-gray-300', 'text-gray-900', 'placeholder:text-gray-400');
+                  confirmInput.classList.add('outline-red-300', 'text-red-700', 'placeholder:text-red-400');
+                  errorIcon.classList.remove('hidden');
+                  errorMessage.classList.remove('hidden');
+              } else {
+                  // 비밀번호가 일치할 때
+                  confirmInput.classList.remove('outline-red-300', 'text-red-700', 'placeholder:text-red-400');
+                  confirmInput.classList.add('outline-gray-300', 'text-gray-900', 'placeholder:text-gray-400');
+                  errorIcon.classList.add('hidden');
+                  errorMessage.classList.add('hidden');
+              }
+          } else if (confirmPassword === '') {
+              // 확인 비밀번호가 비어있을 때는 초기 상태로 복원
+              confirmInput.classList.remove('outline-red-300', 'text-red-700', 'placeholder:text-red-400');
+              confirmInput.classList.add('outline-gray-300', 'text-gray-900', 'placeholder:text-gray-400');
+              errorIcon.classList.add('hidden');
+              errorMessage.classList.add('hidden');
+          }
+      }
+
+      // 이벤트 리스너 등록
+      document.addEventListener('DOMContentLoaded', function() {
+          const confirmPasswordInput = document.getElementById('hs-toggle-password1');
+
+          // 비밀번호 확인 입력 필드에서 포커스가 벗어날 때 검증
+          confirmPasswordInput.addEventListener('blur', validatePassword);
+
+          // 원본 비밀번호가 변경될 때도 다시 검증
+          document.getElementById('hs-toggle-password').addEventListener('input', function() {
+              // 확인 비밀번호가 입력되어 있을 때만 검증
+              if (confirmPasswordInput.value) {
+                  validatePassword();
+              }
+          });
       });
     </script>
   </body>
