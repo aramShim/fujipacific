@@ -243,33 +243,51 @@
         <!-- Content -->
         <main class="flex-1 px-4 lg:px-6 pb-6">
           <div class="h-full py-2">
-            <div class="flex gap-x-4 ">
-                <div>
-                    <h2 class="text-2xl font-bold">Contact Us</h2>
-                    <p>We're here to help you</p>
-                </div>
-                <div class="flex gap-4">
-                    <div class="bg-white p-12 rounded-lg p-6 w-[50%]">
-                        <h3 class="text-lg font-bold"><i data-lucide="mailbox" class="shrink-0 size-4"></i>Email</h3>
-                        <p class="text-blue-600 font-bold">fujipacific@fujipacific.co.kr</p>
-                        <p class="text-blue-600">royalty@fujipacific.co.kr</p>
-                    </div>
-                    <div class="bg-white p-12 rounded-lg p-6 w-[50%]">
-                        <h3 class="text-lg font-bold"><i data-lucide="phone" class="shrink-0 size-4"></i>Phone</h3>
-                        <p class="text-blue-600 font-bold">+82 2 512 2196</p>
-                    </div>
-                    <div class="bg-white p-12 rounded-lg p-6 w-[50%]">
-                        <h3 class="text-lg font-bold"><i data-lucide="map" class="shrink-0 size-4"></i>Address</h3>
-                        <p class="text-blue-600 font-bold">3F, 24 Seolleung-ro 161-gil, Gangnam-gu, Seoul, Republic of Korea</p>
-                    </div>
-                    <div class="bg-white p-12 rounded-lg p-6 w-[50%]">
-                        <h3 class="text-lg font-bold"><i data-lucide="clock-5" class="shrink-0 size-4"></i>Office Hours</h3>
-                        <p class="text-blue-600 font-bold">9:30 AM - 5:30 PM KRT</p>
-                        <p class="">Monday-Friday</p>
-                    </div>
-                </div>
-                
+            
+            <div>
+                <h2 class="text-2xl font-bold">Contact Us</h2>
+                <p class="text-gray-600">We're always ready to listen and assist — contact us and let us know how we can help you best.</p>
             </div>
+            <div class="flex gap-4 mt-10 flex-wrap">
+                <div class="bg-white p-12 rounded-lg p-6 lg:w-[49%] box-border shadow-sm border border-gray-100 w-full">
+                    <h3 class="text-lg font-bold border border-transparent border-dashed border-b-gray-200 pb-2">
+                      <span class="inline-block aspect-1 bg-blue-50 rounded-md p-2 text-blue-500"><i data-lucide="mailbox" class="shrink-0 size-5"></i></span>
+                      <p class="mb-2 text-blue-600">Email</p>
+                    </h3>
+                    <ul class="pt-4">
+                      <li>
+                        <p class="text-gray-600 p-1">fujipacific@fujipacific.co.kr</p>
+                      </li>
+                      <li>
+                        <p class="text-gray-600 p-1">royalty@fujipacific.co.kr</p>
+                      </li>
+                    </ul>
+                    
+                </div>
+                <div class="bg-white p-12 rounded-lg p-6 lg:w-[49%] box-border shadow-sm border border-gray-100 w-full">
+                    <h3 class="text-lg font-bold border border-transparent border-dashed border-b-gray-200 pb-2">
+                      <span class="inline-block aspect-1 bg-rose-50 rounded-md p-2 text-rose-500"><i data-lucide="phone" class="shrink-0 size-5"></i></span>
+                      <p class="mb-2 text-rose-600">Phone</p>
+                    </h3>
+                    <p class="pt-4 text-gray-600 p-1">+82 2 512 2196</p>
+                </div>
+                <div class="bg-white p-12 rounded-lg p-6 lg:w-[49%] box-border shadow-sm border border-gray-100 w-full">
+                    <h3 class="text-lg font-bold border border-transparent border-dashed border-b-gray-200 pb-2">
+                      <span class="inline-block aspect-1 bg-green-50 rounded-md p-2 text-green-500"><i data-lucide="map" class="shrink-0 shrink-0 size-5"></i></span>
+                      <p class="mb-2 text-green-600">Address</p>
+                    </h3>
+                    <p class="pt-4 text-gray-600 p-1">3F, 24 Seolleung-ro 161-gil, Gangnam-gu, Seoul, Republic of Korea</p>
+                </div>
+                <div class="bg-white p-12 rounded-lg p-6 lg:w-[49%] box-border shadow-sm border border-gray-100 w-full">
+                    <h3 class="text-lg font-bold border border-transparent border-dashed border-b-gray-200 pb-2">
+                      <span class="inline-block aspect-1 bg-yellow-50 rounded-md p-2 text-yellow-500"><i data-lucide="clock-5" class="shrink-0 shrink-0 size-5"></i></span>
+                      <p class="mb-2 text-yellow-600">Office Hours</p>
+                    </h3>
+                    <p class="pt-4 text-gray-600 p-1">9:30 AM - 5:30 PM KRT <span class="text-sm">(Monday-Friday)</span></p>
+                </div>
+            </div>
+                
+            
           </div>
         </main>
 
@@ -290,10 +308,6 @@
     <!-- JS PLUGINS -->
     <script src="/src/js/preline.min.js" crossorigin="anonymous" defer></script>
 
-    <!-- Apexcharts -->
-    <script src="/src/js/lodash.min.js"></script>
-    <script src="/src/js/apexchart.min.js"></script>
-    <script src="/src/js/helper-apexcharts.js"></script>
 
     <script>
       window.addEventListener("load", () => {
