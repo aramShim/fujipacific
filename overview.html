@@ -188,9 +188,7 @@
             </div>
             <div class="flex items-center space-x-4">
               <!-- Dropdown -->
-              <div
-                class="hs-dropdown [--placement:bottom-right] relative inline-flex"
-              >
+              <div class="hs-dropdown [--placement:bottom-right] relative inline-flex">
                 <button
                   id="hs-dropdown-user"
                   type="button"
@@ -199,10 +197,7 @@
                   aria-expanded="false"
                   aria-label="Dropdown"
                 >
-                  <i
-                    data-lucide="circle-user-round"
-                    class="shrink-0 size-6"
-                  ></i>
+                  <i data-lucide="circle-user-round" class="shrink-0 size-6"></i>
                 </button>
 
                 <div
@@ -211,12 +206,8 @@
                   aria-orientation="vertical"
                   aria-labelledby="hs-dropdown-user"
                 >
-                  <div
-                    class="py-3 px-5 bg-gray-100 rounded-t-lg dark:bg-neutral-700"
-                  >
-                    <p
-                      class="text-sm font-medium text-gray-800 dark:text-neutral-200"
-                    >
+                  <div class="py-3 px-5 bg-gray-100 rounded-t-lg dark:bg-neutral-700">
+                    <p class="text-sm font-medium text-gray-800 dark:text-neutral-200">
                       홍길동님
                     </p>
                     <p class="text-xs text-gray-500 dark:text-neutral-500">
@@ -224,17 +215,11 @@
                     </p>
                   </div>
                   <div class="p-1.5 space-y-0.5">
-                    <a
-                      href="mypage.html"
-                      class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
-                    >
+                    <a href="/mypage.html" class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
                       <i data-lucide="user-cog" class="shrink-0 size-4"></i>
                       마이페이지
                     </a>
-                    <button
-                      type="button"
-                      class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
-                    >
+                    <button type="button" class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
                       <i data-lucide="log-out" class="shrink-0 size-4"></i>
                       로그아웃
                     </button>
@@ -249,7 +234,70 @@
         <!-- Content -->
         <main class="flex-1 px-4 lg:px-6 pb-6">
           <div class="h-full py-2">
-            
+            <div class="flex flex-col">
+              <div class="-m-1.5 overflow-x-auto">
+                <div class="p-1.5 min-w-full inline-block align-middle">
+                  <div class="bg-white border border-gray-200 rounded-lg overflow-hidden dark:border-neutral-700">
+                    <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
+                      <thead class="bg-gray-100 dark:bg-neutral-700">
+                        <tr>
+                          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500">Period</th>
+                          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500">Royalty</th>
+                          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500">Beginning Balance</th>
+                          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500">Advance Recoup</th>
+                          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500">Adjustments</th>
+                          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500">Gross Amount</th>
+                          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500">Income Tax</th>
+                          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500">Local Income Tax</th>
+                          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500">Net Payment</th>
+                          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500">Carried Forward</th>
+                        </tr>
+                      </thead>
+                      <tbody class="divide-y divide-gray-200">
+                        <tr>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">2Q2025</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">2025.06</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">43,629</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">9,748</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">0</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">53,378</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">1,600</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">160</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">51,618</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">0</td>
+                        </tr>
+                        <tr>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">2Q2025</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">2025.06</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">43,629</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">9,748</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">0</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">53,378</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">1,600</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">160</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">51,618</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">0</td>
+                        </tr>
+                        <tr>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">2Q2025</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">2025.06</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">43,629</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">9,748</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">0</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">53,378</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">1,600</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">160</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">51,618</td>
+                          <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">0</td>
+                        </tr>
+
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </main>
 
