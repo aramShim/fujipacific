@@ -239,7 +239,12 @@
                   "zeroRecords": "<div class=\"py-10 px-5 flex flex-col justify-center items-center text-center\"><svg class=\"shrink-0 size-6 text-gray-500 dark:text-neutral-500\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><div class=\"max-w-sm mx-auto\"><p class=\"mt-2 text-sm text-gray-600 dark:text-neutral-400\">No search results</p></div></div>"
                 }
               }'>
-                <div class="pb-3 flex justify-end"> 
+                <div class="pb-3 flex justify-end gap-x-2">
+                  <select class="py-2 px-4 pe-9 block border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                    <option>select error options</option>
+                    <option value="error">error</option>
+                    <option value="success">success</option>
+                  </select>
                   <div class="relative max-w-xs w-full">
                     <label for="hs-table-input-search" class="sr-only">Search</label>
                     <input type="text" name="hs-table-search" id="hs-table-input-search" class="py-1.5 sm:py-2 px-3 ps-9 block w-full border border-gray-200 shadow-2xs rounded-lg sm:text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Search for items" data-hs-datatable-search="">
@@ -270,6 +275,16 @@
 
                             <th scope="col" class="py-1 group text-center font-normal focus:outline-hidden">
                               <div class="py-1 px-2.5 inline-flex items-center border border-transparent text-sm text-gray-500 rounded-md hover:border-gray-200 dark:text-neutral-500 dark:hover:border-neutral-700">
+                                Email/Code
+                                <svg class="size-3.5 ms-1 -me-0.5 text-gray-400 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path class="hs-datatable-ordering-desc:text-blue-600 dark:hs-datatable-ordering-desc:text-blue-500" d="m7 15 5 5 5-5"></path>
+                                  <path class="hs-datatable-ordering-asc:text-blue-600 dark:hs-datatable-ordering-asc:text-blue-500" d="m7 9 5-5 5 5"></path>
+                                </svg>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="py-1 group text-center font-normal focus:outline-hidden">
+                              <div class="py-1 px-2.5 inline-flex items-center border border-transparent text-sm text-gray-500 rounded-md hover:border-gray-200 dark:text-neutral-500 dark:hover:border-neutral-700">
                                 Account Date
                                 <svg class="size-3.5 ms-1 -me-0.5 text-gray-400 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                   <path class="hs-datatable-ordering-desc:text-blue-600 dark:hs-datatable-ordering-desc:text-blue-500" d="m7 15 5 5 5-5"></path>
@@ -287,7 +302,6 @@
                                 </svg>
                               </div>
                             </th>
-
                             <th scope="col" class="py-1 group text-center font-normal focus:outline-hidden">
                               <div class="py-1 px-2.5 inline-flex items-center border border-transparent text-sm text-gray-500 rounded-md hover:border-gray-200 dark:text-neutral-500 dark:hover:border-neutral-700">
                                 Send Date
@@ -299,16 +313,7 @@
                             </th>
                             <th scope="col" class="py-1 group text-center font-normal focus:outline-hidden">
                               <div class="py-1 px-2.5 inline-flex items-center border border-transparent text-sm text-gray-500 rounded-md hover:border-gray-200 dark:text-neutral-500 dark:hover:border-neutral-700">
-                                Send Count
-                                <svg class="size-3.5 ms-1 -me-0.5 text-gray-400 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                  <path class="hs-datatable-ordering-desc:text-blue-600 dark:hs-datatable-ordering-desc:text-blue-500" d="m7 15 5 5 5-5"></path>
-                                  <path class="hs-datatable-ordering-asc:text-blue-600 dark:hs-datatable-ordering-asc:text-blue-500" d="m7 9 5-5 5 5"></path>
-                                </svg>
-                              </div>
-                            </th>
-                            <th scope="col" class="py-1 group text-center font-normal focus:outline-hidden">
-                              <div class="py-1 px-2.5 inline-flex items-center border border-transparent text-sm text-gray-500 rounded-md hover:border-gray-200 dark:text-neutral-500 dark:hover:border-neutral-700">
-                                Detail
+                                Error
                                 <svg class="size-3.5 ms-1 -me-0.5 text-gray-400 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                   <path class="hs-datatable-ordering-desc:text-blue-600 dark:hs-datatable-ordering-desc:text-blue-500" d="m7 15 5 5 5-5"></path>
                                   <path class="hs-datatable-ordering-asc:text-blue-600 dark:hs-datatable-ordering-asc:text-blue-500" d="m7 9 5-5 5 5"></path>
@@ -321,24 +326,26 @@
                           </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
-                          <tr class="hover:bg-gray-100">                            
-                            <td class="p-2 px-1 text-sm text-gray-800 text-start">[후지퍼시픽] Merry Christmas & Happy New Year!</td>
-                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">2024-12-30</td>
-                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">admin_of</td>
-                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">2025-02-20 14:48:58</td>
-                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">12</td>
+                          <tr class="hover:bg-gray-100 cursor-pointer" onclick="emailContent(1)">                            
+                            <td class="p-2 px-1 text-sm text-gray-800 text-start">1H2025 Royalty Statement</td>
                             <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">
-                              <a href="email-history-more.html" class="p-2 rounded-md bg-blue-100 border border-blue-200 inline-flex items-center gap-x-1 text-blue-600 text-xs font-medium hover:bg-blue-200"><i data-lucide="file-text" class="size-3"></i>상세보기</a>
+                                (VINCEMU)|VINCEMU
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">2025-06-30</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">admin_af</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">2025-08-28</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">
+                              <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-red-100 text-red-800 rounded-full"><i data-lucide="circle-alert" class="shrink-0 size-3"></i>error</span>
                             </td>
                           </tr>
-                          <tr class="hover:bg-gray-100">                            
-                            <td class="p-2 px-1 text-sm text-gray-800 text-start">2H2024 Royalty Statement</td>
-                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">2024-12-30</td>
-                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">admin_ol</td>
-                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">2025-02-20 14:48:58</td>
-                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">2</td>
+                          <tr class="hover:bg-gray-100 cursor-pointer" onclick="emailContent(2)">                            
+                            <td class="p-2 px-1 text-sm text-gray-800 text-start">1H2025 Royalty Statement</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">(UPFRONT)|UPFRONT</td>
+                           <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">2025-06-30</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">admin_af</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">2025-08-28</td>
                             <td class="p-2 px-1 whitespace-nowrap text-sm text-gray-800 text-center">
-                              <a href="email-history-more.html" class="p-2 rounded-md bg-blue-100 border border-blue-200 inline-flex items-center gap-x-1 text-blue-600 text-xs font-medium hover:bg-blue-200"><i data-lucide="file-text" class="size-3"></i>상세보기</a>
+                              <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-green-100 text-green-800 rounded-full"><i data-lucide="circle-check" class="shrink-0 size-3"></i>success</span>
                             </td>
                           </tr>
                           
@@ -419,6 +426,10 @@
         lucide.createIcons();
         window.HSStaticMethods.autoInit();
       });
+      
+    function emailContent(idx){
+        window.open("email-content-popup.html?idx="+idx+"", "mail_select", "width=600, height=700, left=100, top=50,toolbar=no, menubar=no, scrollbars=yes, resizable=no");
+    }
     </script>
   </body>
 </html>

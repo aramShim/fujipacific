@@ -89,7 +89,7 @@
               <div id="system-accordion-child" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="system-accordion">
                 <ul class="ps-6 pt-1 space-y-1">
                   <li>
-                    <a href="/user-management.html" class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-600 rounded-lg hover:bg-white hover:text-blue-600 focus:outline-none focus:text-blue-600 focus:bg-white">
+                    <a href="/user-management.html" class="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm rounded-lg hover:bg-white hover:text-blue-600 focus:outline-none focus:text-blue-600 focus:bg-white rounded-lg text-blue-600 bg-white border-r-2 border-blue-400">
                       User Management
                     </a>
                   </li>
@@ -104,7 +104,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="/crawling.html" class="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm rounded-lg hover:bg-white hover:text-blue-600 focus:outline-none focus:text-blue-600 focus:bg-white rounded-lg text-blue-600 bg-white border-r-2 border-blue-400">
+                    <a href="/crawling.html" class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-600 rounded-lg hover:bg-white hover:text-blue-600 focus:outline-none focus:text-blue-600 focus:bg-white">
                       Crawling
                     </a>
                   </li>
@@ -179,11 +179,13 @@
               >
                 <i data-lucide="menu" class="w-5 h-5 text-gray-600"></i>
               </button>
-              <h1 class="text-xl font-semibold text-gray-900">Crawling</h1>
+              <h1 class="text-xl font-semibold text-gray-900">Membership Registration</h1>
             </div>
             <div class="flex items-center space-x-4">
               <!-- Dropdown -->
-              <div class="hs-dropdown [--placement:bottom-right] relative inline-flex">
+              <div
+                class="hs-dropdown [--placement:bottom-right] relative inline-flex"
+              >
                 <button
                   id="hs-dropdown-user"
                   type="button"
@@ -192,7 +194,10 @@
                   aria-expanded="false"
                   aria-label="Dropdown"
                 >
-                  <i data-lucide="circle-user-round" class="shrink-0 size-6"></i>
+                  <i
+                    data-lucide="circle-user-round"
+                    class="shrink-0 size-6"
+                  ></i>
                 </button>
 
                 <div
@@ -201,8 +206,12 @@
                   aria-orientation="vertical"
                   aria-labelledby="hs-dropdown-user"
                 >
-                  <div class="py-3 px-5 bg-gray-100 rounded-t-lg dark:bg-neutral-700">
-                    <p class="text-sm font-medium text-gray-800 dark:text-neutral-200">
+                  <div
+                    class="py-3 px-5 bg-gray-100 rounded-t-lg dark:bg-neutral-700"
+                  >
+                    <p
+                      class="text-sm font-medium text-gray-800"
+                    >
                       홍길동님
                     </p>
                     <p class="text-xs text-gray-500 dark:text-neutral-500">
@@ -210,11 +219,17 @@
                     </p>
                   </div>
                   <div class="p-1.5 space-y-0.5">
-                    <a href="/mypage.html" class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
+                    <a
+                      href="mypage.html"
+                      class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                    >
                       <i data-lucide="user-cog" class="shrink-0 size-4"></i>
                       마이페이지
                     </a>
-                    <button type="button" class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
+                    <button
+                      type="button"
+                      class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                    >
                       <i data-lucide="log-out" class="shrink-0 size-4"></i>
                       로그아웃
                     </button>
@@ -228,42 +243,100 @@
 
         <!-- Content -->
         <main class="flex-1 px-4 lg:px-6 pb-6">
-          <div class="h-full">
+          <div class="h-full py-2">
             <div class="flex flex-col">
-                <div class="flex justify-end pb-3" >
-                    <button type="button" class="p-2 px-4 rounded-md bg-blue-600 border border-blue-600 inline-flex items-center gap-x-1 text-white text-sm font-semibold hover:bg-blue-200">크롤링 작업하기</button>
-                </div>
-                <div class="-m-1.5 overflow-x-auto">
-                    <div class="p-1.5 min-w-full inline-block align-middle">
-                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden dark:border-neutral-700">
-                        <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
-                        <thead class="bg-gray-100 dark:bg-neutral-700">
-                            <tr>
-                                <th scope="col" class="px-6 py-3 text-center text-sm font-medium text-gray-500">No</th>
-                                <th scope="col" class="px-6 py-3 text-center text-sm font-medium text-gray-500">작업일자</th>
-                                <th scope="col" class="px-6 py-3 text-center text-sm font-medium text-gray-500">Modify</th>                           
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200">
-                            <tr>
-                            <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">1</td>
-                            <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">2025년 08월 Crawling List</td>
-                            <td class="p-3 whitespace-nowrap text-sm text-center text-gray-800">
-                                <div class="flex justify-center items-center gap-x-2">
-                                    <button type="button" class="p-2 rounded-md bg-blue-100 border border-blue-200 inline-flex items-center gap-x-1 text-blue-600 text-xs font-medium hover:bg-blue-200">확인</button>
-                                    <button type="button" class="p-2 rounded-md bg-red-100 border border-red-200 inline-flex items-center gap-x-1 text-red-600 text-xs font-medium hover:bg-red-200">삭제</button>
-                                </div>
-                            </td>
-                            
-                            </tr>
-                            
+              <div class="-m-1.5 overflow-x-auto">
+                <div class="p-1.5 min-w-full inline-block align-middle">
+                  <div class="border border-gray-200 rounded-lg shadow-xs overflow-hidden dark:border-neutral-700 bg-white">
+                    <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
+                      
+                      <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
+                        <tr>
+                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">구분</th>  
+                          <td class="px-6 py-3 whitespace-nowrap text-sm text-gray-800">
+                            <div class="flex items-center gap-x-2">
+                              <select class="py-2 px-4 pe-9 block border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                                <option>select options</option>
+                                <option value="">OWNER</option>
+                                <option value="">ADMIN</option>
+                                <option value="">SYSTEM</option>
+                              </select>
+                              <button type="button" class="p-2 px-4 rounded-md bg-gray-100 border border-gray-200 inline-flex items-center gap-x-1 text-gray-600 text-sm font-medium hover:bg-gray-200">자동 로그인</button>
+                             </div>
 
-                            
-                        </tbody>
-                        </table>
-                    </div>
-                    </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">유저 아이디</th>  
+                          <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
+                            <div class="flex items-center gap-x-2">
+                              <input type="text" class="p-2 px-4 border border-gray-200 rounded-lg text-sm">
+                              <button type="button" class="p-2 px-4 border border-blue-200 bg-blue-100 text-blue-500 rounded-lg hover:bg-blue-200" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-scale-animation-modal" data-hs-overlay="#changePassword">중복체크</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">유저명(영문)</th>  
+                          <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
+                            <input type="text" class="p-2 px-4 border border-gray-200 rounded-lg text-sm">
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">유저명(한글)</th>  
+                          <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
+                            <input type="text" class="p-2 px-4 border border-gray-200 rounded-lg text-sm">
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">국가</th>  
+                          <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
+                            <select class="py-2 px-4 pe-9 block border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                                <option>select options</option>
+                                <option value="">OL</option>
+                                <option value="">OF</option>
+                                <option value="">AL</option>
+                                <option value="">AF</option>
+                              </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">코드</th>  
+                          <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
+                            <div class="flex items-center gap-x-2">
+                              <input type="text" class="p-2 px-4 border border-gray-200 rounded-lg text-sm">
+                              <button type="button" class="p-2 px-4 border border-gray-200 bg-gray-100 text-gray-500 rounded-lg hover:bg-gray-200" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-scale-animation-modal" data-hs-overlay="#changePassword">데이터 가져오기</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">이메일</th>  
+                          <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
+                            <input type="text" class="p-2 px-4 border border-gray-200 rounded-lg text-sm">
+                           
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">메모</th>  
+                          <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
+                            <div class="max-w-sm space-y-3">
+                              <textarea class="py-2 px-3 sm:py-3 sm:px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none " rows="3" placeholder=""></textarea>
+                            </div>
+                           
+                          </td>
+                        </tr>
+
+                        
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
+              </div>
+              <div class="flex justify-center mt-6">
+                <div class="flex items-center justify-center gap-x-2 w-[50%]">
+                  <button type="button" class="flex w-full justify-center rounded-lg bg-gray-600 px-8 py-3 text-md font-semibold text-white shadow-xs hover:bg-gray-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">취소</button>
+                  <button type="button" class="flex w-full justify-center rounded-lg bg-blue-600 px-8 py-3 text-md font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">저장</button>
+                </div>
+              </div>
             </div>
           </div>
         </main>
@@ -280,16 +353,16 @@
       </div>
     </div>
 
-    <!--footer-->
+
 
     <!-- JS PLUGINS -->
     <script src="/src/js/preline.min.js" crossorigin="anonymous" defer></script>
-
     <script>
       window.addEventListener("load", () => {
         lucide.createIcons();
         window.HSStaticMethods.autoInit();
       });
     </script>
+  
   </body>
 </html>

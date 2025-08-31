@@ -89,4 +89,10 @@ pre {
   transition: all 0.25s ease-in-out;
 }
 
+.dt-layout-row:has(.dt-search),
+.dt-layout-row:has(.dt-length),
+.dt-layout-row:has(.dt-paging),
+.dt-column-order {
+  display: none !important;
+}
 
