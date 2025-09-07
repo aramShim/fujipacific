@@ -239,34 +239,18 @@
           <div class="h-full">
             <div class="space-y-4 sm:space-y-6">
               <!-- Grid -->
-              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+              <div class="grid grid-cols-2 gap-4 ">
                 <!-- Card -->
                 <div class="flex flex-col bg-white border shadow-sm rounded-xl">
                   <div class="p-4 md:p-5">
                     <div class="flex items-center gap-x-2">
-                      <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-neutral-500">Total Amount(2025-08)</p>
+                      <p class="text-sm font-bold text-gray-800">Total Amount(2025-08)</p>
                     </div>
-
-                    <div class="mt-1 flex items-center gap-x-2">
-                      <h3 class="text-xl sm:text-2xl font-medium text-gray-800 dark:text-neutral-200">72,540</h3>
-                      <span class="flex items-center gap-x-1 text-green-600">
-                        <svg
-                          class="inline-block size-4 self-center"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-                          <polyline points="16 7 22 7 22 13" />
-                        </svg>
-                        <span class="inline-block text-sm">1.7%</span>
-                      </span>
+                    <div class="mt-1">
+                      <p class="text-xl sm:text-2xl font-semibold text-gray-800 dark:text-neutral-200">
+                        <span class="text-xs text-gray-400">KRW</span> 72,540
+                      </p>
+                      <a href="overview.html" class="flex items-center gap-x-1 mt-2 text-xs text-blue-500 hover:underline "><i data-lucide="chevrons-right" class="size-3"></i> View account Overview </a>
                     </div>
                   </div>
                 </div>
@@ -276,136 +260,130 @@
                 <div class="flex flex-col bg-white border shadow-sm rounded-xl">
                   <div class="p-4 md:p-5">
                     <div class="flex items-center gap-x-2">
-                      <p class="text-xs uppercase tracking-wide text-gray-500">Sessions</p>
+                      <p class="text-sm font-bold text-gray-800">Latest Statements(2025-08)</p>
                     </div>
-
-                    <div class="mt-1 flex items-center gap-x-2">
-                      <h3 class="text-xl sm:text-2xl font-medium text-gray-800">29.4%</h3>
+                    <div class="mt-1">
+                      <div class="flex gap-x-6">
+                        <a href="" class="flex items-center font-bold gap-x-1 text-blue-500 hover:text-blue-700"><span class="aspectio-square p-2 rounded-md bg-blue-50"><i data-lucide="arrow-down-to-line" class="size-3 "></i></span>Detail</a>
+                        <a href="" class="flex items-center font-bold gap-x-1 text-blue-500 hover:text-blue-700"><span class="aspectio-square p-2 rounded-md bg-blue-50"><i data-lucide="arrow-down-to-line" class="size-3 "></i></span>Tax Form</a>
+                        
+                      </div>
+                      <a href="statement.html" class="flex items-center gap-x-1 mt-2 text-xs text-blue-500 hover:underline "><i data-lucide="chevrons-right" class="size-3"></i> View all Statements </a>
                     </div>
                   </div>
+                </div>
+                <!-- End Card -->               
+              </div>
+              <!-- End Grid -->
+              <div class="my-4">
+                <div class="p-4 md:p-5 flex flex-col bg-white border shadow-sm rounded-xl">
+                  <!-- Header -->
+                  <div class="flex justify-between items-center">
+                    <h2 class="text-md text-gray-700 font-bold">Royalties Trend</h2>
+                    
+                  </div>                  
+                  <!-- End Header -->
+                  <div class="h-[260px]">
+                    <canvas id="royaltiesTrend" class="h-full"></canvas>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="grid lg:grid-cols-2 gap-4">
+                <!-- Card -->
+                <div class="p-4 md:p-5 flex flex-col bg-white border shadow-sm rounded-xl">
+                  <!-- Header -->
+                  <div class="flex justify-between items-center">
+                    <h2 class="text-md text-gray-700 font-bold">Top Song</h2>
+                    <a href="" class="inline-flex py-1 px-2 bg-gray-100 rounded-lg items-center gap-x-1 text-xs hover:bg-gray-200"><i data-lucide="circle-plus" class="size-3"></i>more</a>
+                  </div>                  
+                  <!-- End Header -->
+
+                  <ul class="w-full space-y-4 mt-5">
+                    <li class="flex items-center justify-between">
+                      <div class="text-sm flex items-center gap-x-2">
+                        <span class="inline-flex items-center justify-center aspect-1 p-1 rounded-full bg-gray-100 w-[30px] h-[30px] font-bold">1</span> <b>WANABE</b>
+                      </div>
+                      <div class="text-sm font-bold"><span class="text-xs mr-2 font-semibold text-gray-500">KRW</span>25,874,484</div>
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <div class="text-sm flex items-center gap-x-2">
+                        <span class="inline-flex items-center justify-center aspect-1 p-1 rounded-full bg-gray-100 w-[30px] h-[30px] font-bold">2</span> <b>WANABE</b>
+                      </div>
+                      <div class="text-sm font-bold"><span class="text-xs mr-2 font-semibold text-gray-500">KRW</span>25,874,484</div>
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <div class="text-sm flex items-center gap-x-2">
+                        <span class="inline-flex items-center justify-center aspect-1 p-1 rounded-full bg-gray-100 w-[30px] h-[30px] font-bold">3</span> <b>WANABE</b>
+                      </div>
+                      <div class="text-sm font-bold"><span class="text-xs mr-2 font-semibold text-gray-500">KRW</span>25,874,484</div>
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <div class="text-sm flex items-center gap-x-2">
+                        <span class="inline-flex items-center justify-center aspect-1 p-1 rounded-full bg-gray-100 w-[30px] h-[30px] font-bold">4</span> <b>WANABE</b>
+                      </div>
+                      <div class="text-sm font-bold"><span class="text-xs mr-2 font-semibold text-gray-500">KRW</span>25,874,484</div>
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <div class="text-sm flex items-center gap-x-2">
+                        <span class="inline-flex items-center justify-center aspect-1 p-1 rounded-full bg-gray-100 w-[30px] h-[30px] font-bold">5</span> <b>WANABE</b>
+                      </div>
+                      <div class="text-sm font-bold"><span class="text-xs mr-2 font-semibold text-gray-500">KRW</span>25,874,484</div>
+                    </li>
+                  </ul>
                 </div>
                 <!-- End Card -->
 
                 <!-- Card -->
-                <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-800">
-                  <div class="p-4 md:p-5">
-                    <div class="flex items-center gap-x-2">
-                      <p class="text-xs uppercase tracking-wide text-gray-500">Avg. Click Rate</p>
-                    </div>
-
-                    <div class="mt-1 flex items-center gap-x-2">
-                      <h3 class="text-xl sm:text-2xl font-medium text-gray-800">56.8%</h3>
-                      <span class="flex items-center gap-x-1 text-red-600">
-                        <svg
-                          class="inline-block size-4 self-center"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <polyline points="22 17 13.5 8.5 8.5 13.5 2 7" />
-                          <polyline points="16 17 22 17 22 11" />
-                        </svg>
-                        <span class="inline-block text-sm">1.7%</span>
-                      </span>
-                    </div>
+                <div class="p-4 md:p-5 flex flex-col bg-white border shadow-sm rounded-xl">
+                  <!-- Header -->
+                  <div class="flex justify-between items-center">
+                    <h2 class="text-md text-gray-700 font-bold">Royalties by Type</h2>
+                    <a href="" class="inline-flex py-1 px-2 bg-gray-100 rounded-lg items-center gap-x-1 text-xs hover:bg-gray-200"><i data-lucide="circle-plus" class="size-3"></i>more</a>
                   </div>
-                </div>
-                <!-- End Card -->
+                  <!-- End Header -->
 
-                <!-- Card -->
-                <div class="flex flex-col bg-white border shadow-sm rounded-xl">
-                  <div class="p-4 md:p-5">
-                    <div class="flex items-center gap-x-2">
-                      <p class="text-xs uppercase tracking-wide text-gray-500">Pageviews</p>
-                    </div>
-
-                    <div class="mt-1 flex items-center gap-x-2">
-                      <h3 class="text-xl sm:text-2xl font-medium text-gray-800">92,913</h3>
-                    </div>
+                  <div class="flex items-center justify-center w-full gap-x-12 flex-col lg:flex-row sm:flex-row mt-1">
+                      <div class="h-[250px] aspect-square p-4">
+                          <canvas id="type-donut" class="w-full h-full"></canvas>
+                      </div>
+                      <div id="type-legend" class=""></div>
                   </div>
                 </div>
                 <!-- End Card -->
               </div>
-              <!-- End Grid -->
 
-              <div class="grid lg:grid-cols-2 gap-4 sm:gap-6">
+              <div class="grid lg:grid-cols-2 gap-4">
                 <!-- Card -->
-                <div class="p-4 md:p-5 min-h-[410px] flex flex-col bg-white border shadow-sm rounded-xl">
+                <div class="p-4 md:p-5 flex flex-col bg-white border shadow-sm rounded-xl">
                   <!-- Header -->
                   <div class="flex justify-between items-center">
-                    <div>
-                      <h2 class="text-sm text-gray-500">Income</h2>
-                      <p class="text-xl sm:text-2xl font-medium text-gray-800">$126,238.49</p>
-                    </div>
-
-                    <div>
-                      <span
-                        class="py-[5px] px-1.5 inline-flex items-center gap-x-1 text-xs font-medium rounded-md bg-teal-100 text-teal-800 dark:bg-teal-500/10"
-                      >
-                        <svg
-                          class="inline-block size-3.5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path d="M12 5v14" />
-                          <path d="m19 12-7 7-7-7" />
-                        </svg>
-                        25%
-                      </span>
-                    </div>
+                    <h2 class="text-md text-gray-700 font-bold">Top Territory</h2>
+                    <a href="" class="inline-flex py-1 px-2 bg-gray-100 rounded-lg items-center gap-x-1 text-xs hover:bg-gray-200"><i data-lucide="circle-plus" class="size-3"></i>more</a>
                   </div>
+
+                  
                   <!-- End Header -->
 
-                  <div id="hs-multiple-bar-charts"></div>
+                  <div class="mt-4 flex items-center">
+                      <div id="top-territory" class="space-y-2 w-full"></div>
+                  </div>
                 </div>
                 <!-- End Card -->
 
                 <!-- Card -->
-                <div class="p-4 md:p-5 min-h-[410px] flex flex-col bg-white border shadow-sm rounded-xl">
+                <div class="p-4 md:p-5 flex flex-col bg-white border shadow-sm rounded-xl">
                   <!-- Header -->
                   <div class="flex justify-between items-center">
-                    <div>
-                      <h2 class="text-sm text-gray-500 dark:text-neutral-500">Visitors</h2>
-                      <p class="text-xl sm:text-2xl font-medium text-gray-800">80.3k</p>
-                    </div>
-
-                    <div>
-                      <span class="py-[5px] px-1.5 inline-flex items-center gap-x-1 text-xs font-medium rounded-md bg-red-100 text-red-800">
-                        <svg
-                          class="inline-block size-3.5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path d="M12 5v14" />
-                          <path d="m19 12-7 7-7-7" />
-                        </svg>
-                        2%
-                      </span>
-                    </div>
+                    <h2 class="text-md text-gray-700 font-bold">Top Source</h2>
+                    <a href="" class="inline-flex py-1 px-2 bg-gray-100 rounded-lg items-center gap-x-1 text-xs hover:bg-gray-200"><i data-lucide="circle-plus" class="size-3"></i>more</a>
                   </div>
                   <!-- End Header -->
 
-                  <div id="hs-single-area-chart"></div>
+                  <div class="mt-4 flex items-center">
+                      <div id="top-territory2" class="space-y-2 w-full"></div>
+                  </div>
                 </div>
                 <!-- End Card -->
               </div>
@@ -414,383 +392,7 @@
             </div>
           </div>
 
-          <script>
-            window.addEventListener("load", () => {
-              (function () {
-                buildChart(
-                  "#hs-multiple-bar-charts",
-                  (mode) => ({
-                    chart: {
-                      type: "bar",
-                      height: 300,
-                      toolbar: {
-                        show: false,
-                      },
-                      zoom: {
-                        enabled: false,
-                      },
-                      animations: {
-                        enabled: true,
-                        easing: "easeout",
-                        speed: 800, // 차트 로드 속도
-                        animateGradually: {
-                          enabled: true,
-                          delay: 150, // 개별 막대가 차례로 등장하는 효과
-                        },
-                        dynamicAnimation: {
-                          enabled: true,
-                          speed: 350,
-                        },
-                      },
-                    },
-                    series: [
-                      {
-                        name: "Chosen Period",
-                        data: [23000, 44000, 55000, 57000, 56000, 61000, 58000, 63000, 60000, 66000, 34000, 78000],
-                      },
-                      {
-                        name: "Last Period",
-                        data: [17000, 76000, 85000, 101000, 98000, 87000, 105000, 91000, 114000, 94000, 67000, 66000],
-                      },
-                    ],
-                    plotOptions: {
-                      bar: {
-                        horizontal: false,
-                        columnWidth: "16px",
-                        borderRadius: 0,
-                      },
-                    },
-                    legend: {
-                      show: false,
-                    },
-                    dataLabels: {
-                      enabled: false,
-                    },
-                    stroke: {
-                      show: true,
-                      width: 8,
-                      colors: ["transparent"],
-                    },
-                    xaxis: {
-                      categories: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-                      axisBorder: {
-                        show: false,
-                      },
-                      axisTicks: {
-                        show: false,
-                      },
-                      crosshairs: {
-                        show: false,
-                      },
-                      labels: {
-                        style: {
-                          colors: "#9ca3af",
-                          fontSize: "13px",
-                          fontFamily:
-                            "Pretendard, -apple-system, BlinkMacSystemFont,Apple SD Gothic Neo, Roboto, Noto Sans CJK KR, Arial,Malgun Gothic, sans-serif",
-                          fontWeight: 400,
-                        },
-                        offsetX: -2,
-                        formatter: (title) => title.slice(0, 3),
-                      },
-                    },
-                    yaxis: {
-                      labels: {
-                        align: "left",
-                        minWidth: 0,
-                        maxWidth: 140,
-                        style: {
-                          colors: "#9ca3af",
-                          fontSize: "13px",
-                          fontFamily:
-                            "Pretendard, -apple-system, BlinkMacSystemFont,Apple SD Gothic Neo, Roboto, Noto Sans CJK KR, Arial,Malgun Gothic, sans-serif",
-                          fontWeight: 400,
-                        },
-                        formatter: (value) => (value >= 1000 ? `${value / 1000}k` : value),
-                      },
-                    },
-                    states: {
-                      hover: {
-                        filter: {
-                          type: "darken",
-                          value: 0.9,
-                        },
-                      },
-                    },
-                    tooltip: {
-                      y: {
-                        formatter: (value) => `$${value >= 1000 ? `${value / 1000}k` : value}`,
-                      },
-                      custom: function (props) {
-                        const { categories } = props.ctx.opts.xaxis
-                        const { dataPointIndex } = props
-                        const title = categories[dataPointIndex]
-                        const newTitle = `${title}`
-
-                        return buildTooltip(props, {
-                          title: newTitle,
-                          mode,
-                          hasTextLabel: true,
-                          wrapperExtClasses: "min-w-28",
-                          labelDivider: ":",
-                          labelExtClasses: "ms-2",
-                        })
-                      },
-                    },
-                    responsive: [
-                      {
-                        breakpoint: 568,
-                        options: {
-                          chart: {
-                            height: 300,
-                          },
-                          plotOptions: {
-                            bar: {
-                              columnWidth: "14px",
-                            },
-                          },
-                          stroke: {
-                            width: 8,
-                          },
-                          labels: {
-                            style: {
-                              colors: "#9ca3af",
-                              fontSize: "11px",
-                              fontFamily: "Inter, ui-sans-serif",
-                              fontWeight: 400,
-                            },
-                            offsetX: -2,
-                            formatter: (title) => title.slice(0, 3),
-                          },
-                          yaxis: {
-                            labels: {
-                              align: "left",
-                              minWidth: 0,
-                              maxWidth: 140,
-                              style: {
-                                colors: "#9ca3af",
-                                fontSize: "11px",
-                                fontFamily: "Inter, ui-sans-serif",
-                                fontWeight: 400,
-                              },
-                              formatter: (value) => (value >= 1000 ? `${value / 1000}k` : value),
-                            },
-                          },
-                        },
-                      },
-                    ],
-                  }),
-                  {
-                    colors: ["#2563eb", "#d1d5db"],
-                    grid: {
-                      borderColor: "#e5e7eb",
-                    },
-                  },
-                  {
-                    colors: ["#6b7280", "#2563eb"],
-                    grid: {
-                      borderColor: "#404040",
-                    },
-                  }
-                )
-              })()
-            })
-          </script>
-          <script>
-            window.addEventListener("load", () => {
-              ;(function () {
-                buildChart(
-                  "#hs-single-area-chart",
-                  (mode) => ({
-                    chart: {
-                      height: 300,
-                      type: "area",
-                      toolbar: {
-                        show: false,
-                      },
-                      zoom: {
-                        enabled: false,
-                      },
-                    },
-                    series: [
-                      {
-                        name: "Visitors",
-                        data: [180, 51, 60, 38, 88, 50, 40, 52, 88, 80, 60, 70],
-                      },
-                    ],
-                    legend: {
-                      show: false,
-                    },
-                    dataLabels: {
-                      enabled: false,
-                    },
-                    stroke: {
-                      curve: "straight",
-                      width: 2,
-                    },
-                    grid: {
-                      strokeDashArray: 2,
-                    },
-                    fill: {
-                      type: "gradient",
-                      gradient: {
-                        type: "vertical",
-                        shadeIntensity: 1,
-                        opacityFrom: 0.1,
-                        opacityTo: 0.8,
-                      },
-                    },
-                    xaxis: {
-                      type: "category",
-                      tickPlacement: "on",
-                      categories: [
-                        "25 January 2023",
-                        "26 January 2023",
-                        "27 January 2023",
-                        "28 January 2023",
-                        "29 January 2023",
-                        "30 January 2023",
-                        "31 January 2023",
-                        "1 February 2023",
-                        "2 February 2023",
-                        "3 February 2023",
-                        "4 February 2023",
-                        "5 February 2023",
-                      ],
-                      axisBorder: {
-                        show: false,
-                      },
-                      axisTicks: {
-                        show: false,
-                      },
-                      crosshairs: {
-                        stroke: {
-                          dashArray: 0,
-                        },
-                        dropShadow: {
-                          show: false,
-                        },
-                      },
-                      tooltip: {
-                        enabled: false,
-                      },
-                      labels: {
-                        style: {
-                          colors: "#9ca3af",
-                          fontSize: "13px",
-                          fontFamily: "Inter, ui-sans-serif",
-                          fontWeight: 400,
-                        },
-                        formatter: (title) => {
-                          let t = title
-
-                          if (t) {
-                            const newT = t.split(" ")
-                            t = `${newT[0]} ${newT[1].slice(0, 3)}`
-                          }
-
-                          return t
-                        },
-                      },
-                    },
-                    yaxis: {
-                      labels: {
-                        align: "left",
-                        minWidth: 0,
-                        maxWidth: 140,
-                        style: {
-                          colors: "#9ca3af",
-                          fontSize: "13px",
-                          fontFamily: "Inter, ui-sans-serif",
-                          fontWeight: 400,
-                        },
-                        formatter: (value) => (value >= 1000 ? `${value / 1000}k` : value),
-                      },
-                    },
-                    tooltip: {
-                      x: {
-                        format: "MMMM yyyy",
-                      },
-                      y: {
-                        formatter: (value) => `${value >= 1000 ? `${value / 1000}k` : value}`,
-                      },
-                      custom: function (props) {
-                        const { categories } = props.ctx.opts.xaxis
-                        const { dataPointIndex } = props
-                        const title = categories[dataPointIndex].split(" ")
-                        const newTitle = `${title[0]} ${title[1]}`
-
-                        return buildTooltip(props, {
-                          title: newTitle,
-                          mode,
-                          valuePrefix: "",
-                          hasTextLabel: true,
-                          markerExtClasses: "!rounded-sm",
-                          wrapperExtClasses: "min-w-28",
-                        })
-                      },
-                    },
-                    responsive: [
-                      {
-                        breakpoint: 568,
-                        options: {
-                          chart: {
-                            height: 300,
-                          },
-                          labels: {
-                            style: {
-                              colors: "#9ca3af",
-                              fontSize: "11px",
-                              fontFamily: "Inter, ui-sans-serif",
-                              fontWeight: 400,
-                            },
-                            offsetX: -2,
-                            formatter: (title) => title.slice(0, 3),
-                          },
-                          yaxis: {
-                            labels: {
-                              align: "left",
-                              minWidth: 0,
-                              maxWidth: 140,
-                              style: {
-                                colors: "#9ca3af",
-                                fontSize: "11px",
-                                fontFamily: "Inter, ui-sans-serif",
-                                fontWeight: 400,
-                              },
-                              formatter: (value) => (value >= 1000 ? `${value / 1000}k` : value),
-                            },
-                          },
-                        },
-                      },
-                    ],
-                  }),
-                  {
-                    colors: ["#2563eb", "#9333ea"],
-                    fill: {
-                      gradient: {
-                        stops: [0, 90, 100],
-                      },
-                    },
-                    grid: {
-                      borderColor: "#e5e7eb",
-                    },
-                  },
-                  {
-                    colors: ["#3b82f6", "#a855f7"],
-                    fill: {
-                      gradient: {
-                        stops: [100, 90, 0],
-                      },
-                    },
-                    grid: {
-                      borderColor: "#404040",
-                    },
-                  }
-                )
-              })()
-            })
-          </script>
+          
         </main>
 
         <!-- Footer-->
@@ -810,9 +412,310 @@
     <script src="/src/js/preline.min.js" crossorigin="anonymous" defer></script>
 
     <!-- Apexcharts -->
-    <script src="/src/js/lodash.min.js"></script>
-    <script src="/src/js/apexchart.min.js"></script>
-    <script src="/src/js/helper-apexcharts.js"></script>
+     <!--차트-->
+    <link rel="stylesheet" href="src/css/Chart.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+       /* 외부 커스텀 툴팁 (스샷 스타일) */
+      .rt-tooltip {
+        position: absolute; pointer-events: none; opacity: 0; transform: translate(-50%, -120%);
+        background:#111827; color:#fff; padding:6px 10px; border-radius:10px; font:600 13px/1.2 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        box-shadow: 0 6px 16px rgba(0,0,0,.15);
+        display:flex; align-items:center; gap:6px; z-index: 30;
+      }
+      .rt-tooltip::after { /* 말풍선 꼬리 */
+        content:""; position:absolute; left:50%; bottom:-6px; transform:translateX(-50%);
+        border:6px solid transparent; border-top-color:#111827;
+      }
+      .rt-tooltip .ico {
+        width:18px; height:18px; border-radius:9999px; background:#22c55e;
+        display:flex; align-items:center; justify-content:center; font:700 12px/1 "Inter", system-ui;
+      }
+    </style>
+    <script>
+    // 데이터
+    const labels1 = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const values1 = [5200, 4100, 4800, 6300, 9200, 5200, 6100, 4900, 6200, 6400, 6300, 3500];
+
+    // 캔버스 & 컨텍스트
+    const canvas1 = document.getElementById('royaltiesTrend');
+    const ctx1 = canvas1.getContext('2d');
+
+    // 선 색상
+    const lineColor = '#4353ff';
+
+    // 외부 툴팁 핸들러
+    const externalTooltip = {
+      id: 'externalTooltip',
+      afterInit(chart) {
+        const el = document.createElement('div');
+        el.className = 'rt-tooltip';
+        el.innerHTML = `<span class="ico">$</span><span class="val"></span>`;
+        chart.canvas.parentNode.appendChild(el);
+        chart._rtTip = el;
+      },
+      afterEvent(chart, args) {
+        const {tooltip} = chart;
+        const tip = chart._rtTip;
+        if (!tip) return;
+
+        if (!tooltip || tooltip.opacity === 0) {
+          tip.style.opacity = 0;
+          return;
+        }
+
+        // 값 표시 (천 단위)
+        const v = tooltip.dataPoints[0].parsed.y;
+        tip.querySelector('.val').textContent = `$ ${v.toLocaleString('ko-KR')}`;
+
+        // 캔버스 좌표를 DOM 좌표로
+        const {canvas} = chart;
+        const rect = canvas.getBoundingClientRect();
+        const x = rect.left + window.pageXOffset + tooltip.caretX;
+        const y = rect.top  + window.pageYOffset + tooltip.caretY;
+
+        tip.style.left = `${x}px`;
+        tip.style.top  = `${y}px`;
+        tip.style.opacity = 1;
+      }
+    };
+
+
+    // 차트 생성
+    new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels1,
+        datasets: [{
+          data: values1,
+          borderColor: lineColor,
+          borderWidth: 2,
+          pointRadius: 5,
+          pointBackgroundColor: '#fff',
+          pointBorderColor: lineColor,
+          pointBorderWidth: 2,
+          pointHoverRadius: 6,
+          tension: 0.35,        // 곡률
+          fill: false
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            enabled: false,     // 기본 툴팁 끄고 외부 툴팁 사용
+            intersect: false
+          }
+        },
+        interaction: { mode: 'nearest', intersect: false },
+        scales: {
+          x: {
+            grid: {
+              color: '#eef2f6',
+              drawTicks: false,
+              drawBorder: false
+            },
+            ticks: {
+              color: '#6b7280',
+              padding: 10,
+              font: { size: 12, weight: 500 }
+            }
+          },
+          y: {
+            beginAtZero: true,
+            suggestedMax: 10000,
+            grid: {
+              color: '#eef2f6',
+              drawBorder: false
+            },
+            ticks: {
+              color: '#6b7280',
+              padding: 8,
+              font: { size: 12 },
+              callback: value => value >= 1000 ? `${(value/1000)}k` : value
+            }
+          }
+        }
+      },
+      //plugins: [externalTooltip]
+    });
+  </script>
+    <script>
+    /** 데이터 */
+    const labels = ['Performance', 'Digital', 'Mechanical', 'Sync', 'Others'];
+    const values = [56059, 63000, 50000, 300000, 355000];
+    const colors = [
+      '#ff3fa0', // Performance (핑크)
+      '#f5a623', // Digital (오렌지)
+      '#1cc7c1', // Mechanical (민트)
+      '#27ae60', // Sync (그린)
+      '#c3c7cf'  // Others (그레이)
+    ];
+
+    // 합계/비율 계산
+    const total = values.reduce((a, b) => a + b, 0);
+    const pct = v => (total ? (v / total) * 100 : 0);
+
+    // 통화 포매터
+    const fmtMoney = new Intl.NumberFormat('ko-KR', { style: 'currency', currency: 'KWR', maximumFractionDigits: 2 });
+    const fmtCompact = new Intl.NumberFormat('ko-KR', { notation: 'compact', maximumFractionDigits: 1 });
+
+    /** 중앙 텍스트 플러그인 */
+    const centerText = {
+      id: 'centerText',
+      afterDraw(chart, args, opts) {
+        const { ctx, chartArea: { top, bottom, left, right } } = chart;
+        const x = (left + right) / 2;
+        const y = (top + bottom) / 2;
+
+        ctx.save();
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#999';
+        ctx.font = '600 12px Pretendard, system-ui, -apple-system, Segoe UI, Roboto, sans-serif';
+        ctx.fillText('TOTAL', x, y - 8);
+        ctx.fillStyle = '#333';
+        ctx.font = '700 16px Pretendard, system-ui, -apple-system, Segoe UI, Roboto, sans-serif';
+        ctx.fillText('KRW ' + fmtCompact.format(total), x, y + 14);
+        ctx.restore();
+      }
+    };
+
+    const ctx = document.getElementById('type-donut').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels,
+        datasets: [{
+          data: values,
+          backgroundColor: colors,
+          borderWidth: 0,
+          hoverOffset: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        cutout: '70%',                 // 도넛 두께
+        plugins: {
+          legend: { display: false },  // 기본 레전드 숨김
+          tooltip: {
+            callbacks: {
+              label: (ctx) => {
+                const v = ctx.parsed;
+                return ` ${ctx.label}: ${fmtMoney.format(v)} (${pct(v).toFixed(2)}%)`;
+              }
+            }
+          }
+        }
+      },
+      plugins: [centerText]
+    });
+
+    /** 커스텀 레전드 HTML */
+    const legendWrap = document.getElementById('type-legend');
+    legendWrap.innerHTML = labels.map((name, i) => {
+      const v = values[i];
+      return `
+        <div class="flex items-center gap-2 p-1">
+          <span class="rounded-full inline-block w-[8px] h-[8px]" style="background:${colors[i]}"></span>
+          <span class="flex-1 text-gray-800 text-sm w-[110px]">${name}</span>
+          <span class="text-gray-600 text-sm"><span class="text-xs">KRW</span> <b>${v.toLocaleString('ko-KR')}</b></span>
+          <span class="text-right text-gray-600 text-xs">${pct(v).toFixed(2)}%</span>
+        </div>
+      `;
+    }).join('');
+    </script>
+
+    <style>
+      /* 초기엔 0%에서 시작 */
+      .bar-fill,.bar-fill2 {
+        width: 0;
+        transition: width 1.2s ease-in-out;
+      }
+      
+      @media (prefers-reduced-motion: reduce) {
+        .bar-fill { transition: none; }
+      }
+    </style>
+    <script>
+
+      const territories = [
+        { name: 'Japan',     value: 173262 },
+        { name: 'Taiwan',    value: 144709 },
+        { name: 'China',     value: 42316 },
+        { name: 'Malaysia',  value: 41082 },
+        { name: 'Singapore', value: 14301 },
+      ];
+      const territories2 = [
+        { name: 'Japan2',     value: 173262 },
+        { name: 'Taiwan2',    value: 144709 },
+        { name: 'China2',     value: 42316 },
+        { name: 'Malaysia2',  value: 41082 },
+        { name: 'Singapore2', value: 14301 },
+      ];
+
+
+      const max = Math.max(...territories.map(t => t.value));
+      const max2 = Math.max(...territories2.map(t => t.value));
+      const fmt  = new Intl.NumberFormat('ko-KR');
+      const wrap = document.getElementById('top-territory');
+      const wrap2 = document.getElementById('top-territory2');
+
+      wrap.innerHTML = territories.map(t => {
+        const w = (t.value / max) * 100;
+        return `
+          <div class="relative overflow-hidden rounded-lg">
+            <!-- 트랙 -->
+            <div class="absolute inset-0 bg-gray-400"></div>
+            <!-- 진행바 -->
+            <div class="absolute inset-y-0 left-0 rounded-lg bg-blue-500 bar-fill"></div>
+            <!-- 내용 -->
+            <div class="relative flex items-center justify-between px-4 py-3 text-white">
+              <span class="text-sm font-bold">${t.name}</span>
+              <span class="text-sm text-white font-bold">
+                <span class="mr-2 text-xs font-normal text-neutral-200">KRW</span>${fmt.format(t.value)}
+              </span>
+            </div>
+          </div>
+        `;
+      }).join('');
+      wrap2.innerHTML = territories2.map(t => {
+        const w = (t.value / max2) * 100;
+        return `
+          <div class="relative overflow-hidden rounded-lg">
+            <!-- 트랙 -->
+            <div class="absolute inset-0 bg-gray-400"></div>
+            <!-- 진행바 -->
+            <div class="absolute inset-y-0 left-0 rounded-lg bg-blue-500 bar-fill2"></div>
+            <!-- 내용 -->
+            <div class="relative flex items-center justify-between px-4 py-3 text-white">
+              <span class="text-sm font-bold">${t.name}</span>
+              <span class="text-sm text-white font-bold">
+                <span class="mr-2 text-xs font-normal text-neutral-200">KRW</span>${fmt.format(t.value)}
+              </span>
+            </div>
+          </div>
+        `;
+      }).join('');
+      // 애니메이션 
+      setTimeout(() => {
+        document.querySelectorAll('.bar-fill').forEach((bar, i) => {
+          const w = (territories[i].value / max) * 100;
+          bar.style.width = w + '%';
+        });
+      }, 100);
+
+      setTimeout(() => {
+        document.querySelectorAll('.bar-fill2').forEach((bar, i) => {
+          const w = (territories2[i].value / max2) * 100;
+          bar.style.width = w + '%';
+        });
+      }, 100);
+
+    </script>
+    
 
     <script>
       window.addEventListener("load", () => {
