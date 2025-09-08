@@ -177,7 +177,7 @@
               >
                 <i data-lucide="menu" class="w-5 h-5 text-gray-600"></i>
               </button>
-              <h1 class="text-xl font-semibold text-gray-900">Analysis</h1>
+              <h1 class="text-xl font-semibold text-gray-900">Analysis - source</h1>
             </div>
             <div class="flex items-center space-x-4">
               <!-- Dropdown -->
@@ -233,8 +233,8 @@
         <!-- Content -->
         <main class="flex-1 px-4 lg:px-6 pb-6">
           <div class="h-full">
-            <div class="inline-flex bg-blue-100 rounded-lg transition p-2 shadow-sm">
-              <nav class="flex gap-x-1">
+            <div class="sticky top-[77px] z-20" style="background-color: #fafafa">
+              <nav class="inline-flex gap-x-1 bg-blue-100 rounded-lg transition p-2 shadow-sm">
                 <a href="analysis-song.html" class="py-2 px-4 inline-flex items-center gap-x-1 bg-transparent text-sm text-gray-400 hover:text-gray-700 focus:outline-hidden focus:text-gray-700 font-medium rounded-lg hover:bg-white/50 disabled:opacity-50 disabled:pointer-events-none">
                   <i data-lucide="music-4" class="size-4"></i>Song
                 </a>
@@ -250,33 +250,9 @@
               </nav>
             </div>
 
-            <div class="mt-3">
+            <div >
               <div class="p-3 sm:p-0">
-                <div class="flex flex-nowrap border border-gray-200 rounded-lg overflow-hidden hidden">
-                  <div class="bg-gray-100 p-2 pt-3 px-8 text-gray-700 text-sm font-semibold">Period</div>
-                  <ul class="p-2 flex gap-x-1 overflow-x-auto [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 max-w-[calc(100%-110px)]">
-                    <li>
-                      <a href="" class="px-4 text-xs hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none font-bold text-blue-600">2Q2025</a>
-                    </li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">1Q2025</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">4Q2024</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">3Q2024</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">2Q2024</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">1Q2024</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">4Q2023</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">3Q2023</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">2Q2023</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">1Q2023</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">4Q2022</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">3Q2022</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">2Q2022</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">1Q2022</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">4Q2021</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">3Q2021</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">2Q2021</a></li>
-                    <li><a href="" class="px-4 text-xs text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none ">1Q2021</a></li>
-                  </ul>
-                </div>
+                
                 <div class="flex flex-col">
                   <div data-hs-datatable='{
                     "pageLength": 15,
@@ -288,7 +264,7 @@
                       "zeroRecords": "<div class=\"py-10 px-5 flex flex-col justify-center items-center text-center\"><svg class=\"shrink-0 size-6 text-gray-500 dark:text-neutral-500\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><div class=\"max-w-sm mx-auto\"><p class=\"mt-2 text-sm text-gray-600 dark:text-neutral-400\">No search results</p></div></div>"
                     }
                   }'>
-                    <div class="pb-3 flex items-start flex-col justify-between gap-2 md:flex-row md:items-center sticky top-[76px]" style="background-color: #fafafa">
+                    <div class="py-3 flex items-start flex-col justify-between gap-2 md:flex-row md:items-center sticky top-[128px] border-b border-b-gray-200" style="background-color: #fafafa">
                       <div>
                         <select class="py-2 px-4 pe-9 block border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                           <option>select period</option>
@@ -314,12 +290,9 @@
                       </div>
                       <div class="relative max-w-xs w-full">
                         <label for="hs-table-input-search" class="sr-only">Search</label>
-                        <input type="text" name="hs-table-search" id="hs-table-input-search" class="py-1.5 sm:py-2 px-3 ps-9 block w-full border border-gray-200 shadow-2xs rounded-lg sm:text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Search for items" data-hs-datatable-search="">
+                        <input type="text" name="hs-table-search" id="hs-table-input-search" class="py-1.5 py-2 px-3 ps-9 block w-full border border-gray-200 shadow-2xs rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Search for songs" data-hs-datatable-search="">
                         <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-3">
-                          <svg class="size-4 text-gray-400 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.3-4.3"></path>
-                          </svg>
+                          <i data-lucide="search" class="size-4 text-gray-400 dark:text-neutral-500"></i>                          
                         </div>
                       </div>
                     </div>
