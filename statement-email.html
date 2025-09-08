@@ -252,80 +252,65 @@
                       
                       <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
                         <tr>
-                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">메일 구분</th>  
-                          <td class="px-6 py-3 whitespace-nowrap text-sm text-gray-800">
+                          <th class="px-2 lg:px-6 py-3 text-center text-sm font-medium text-gray-500 dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64 whitespace-nowrap">메일 구분</th>  
+                          <td class="px-2 lg:px-6 py-3 whitespace-nowrap text-sm text-gray-800">
                             <div class="flex items-center gap-x-2">
-                              <select class="py-2 px-4 pe-9 block border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
-                                <option>select options</option>
-                                <option value="">OWNER</option>
-                                <option value="">ADMIN</option>
-                                <option value="">SYSTEM</option>
+                               <select data-hs-select='{
+                                "hasSearch": true,
+                                  "searchPlaceholder": "검색어",
+                                  "searchClasses": "block w-full sm:text-sm border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 before:absolute before:inset-0 before:z-1 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 py-1.5 sm:py-2 px-3",
+                                  "searchWrapperClasses": "bg-white p-2 -mx-1 sticky top-0 dark:bg-neutral-900",
+                                  "placeholder": "선택하세요",
+                                  "toggleTag": "<button type=\"button\" aria-expanded=\"false\"><span class=\"me-2\" data-icon></span><span class=\"text-gray-800 dark:text-neutral-200 \" data-title></span></button>",
+                                  "toggleClasses": "hs-select-disabled:pointer-events-none relative py-2 ps-4 pe-14 flex gap-x-2 text-nowrap w-full cursor-pointer bg-white border border-gray-200 rounded-lg text-start text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:focus:outline-hidden dark:focus:ring-1 dark:focus:ring-neutral-600",
+                                  "dropdownClasses": "!mt-1 max-h-48 pb-1 px-1 shadow-sm space-y-0.5 z-20 w-full bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:bg-neutral-900 dark:border-neutral-700",
+                                  "optionClasses": "py-2 px-4 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-hidden focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800",
+                                  "optionTemplate": "<div><div class=\"flex items-center\"><div class=\"me-2\" data-icon></div><div class=\"text-gray-800 dark:text-neutral-200 \" data-title></div></div></div>",
+                                  "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg class=\"shrink-0 size-3.5 text-gray-500 dark:text-neutral-500 \" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m7 15 5 5 5-5\"/><path d=\"m7 9 5-5 5 5\"/></svg></div>"
+                                }'>
+                                <option>please select mail options</option>
+                                <option value="1">공지메일(OL,임시비밀번호포함)</option>
+                                <option value="2">공지메일(AL,임시비밀번호포함)</option>
+                                <option value="3">공지메일(AF,임시비밀번호포함)</option>
+                                <option value="8">공지메일(OF,임시비밀번호포함)</option>
+                                <option value="4">공지메일(OL,일반)</option>
+                                <option value="5">공지메일(AL,일반)</option>
+                                <option value="6">공지메일(AF,일반)</option>
+                                <option value="9">공지메일(OF,일반)</option>
+                                <option value="7">공지메일(내용x)</option>
                               </select>
-                              <button type="button" class="p-2 px-4 rounded-md bg-gray-100 border border-gray-200 inline-flex items-center gap-x-1 text-gray-600 text-sm font-medium hover:bg-gray-200">자동 로그인</button>
+                              
                              </div>
 
                           </td>
                         </tr>
                         <tr>
-                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">유저 아이디</th>  
-                          <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
+                          <th class="px-2 lg:px-6 py-3 text-center text-sm font-medium text-gray-500 dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64 whitespace-nowrap">Mail Recipient</th>  
+                          <td class="px-2 lg:px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
                             <div class="flex items-center gap-x-2">
-                              <input type="text" class="p-2 px-4 border border-gray-200 rounded-lg text-sm">
-                              <button type="button" class="p-2 px-4 border border-blue-200 bg-blue-100 text-blue-500 rounded-lg hover:bg-blue-200" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-scale-animation-modal" data-hs-overlay="#changePassword">중복체크</button>
+                              AN, JUN SUNG 외 659명
+                              <button type="button" class="p-2 px-4 border border-blue-200 bg-blue-100 text-blue-500 rounded-lg hover:bg-blue-200" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-scale-animation-modal" data-hs-overlay="#mailSelect">select</button>
                             </div>
                           </td>
                         </tr>
                         <tr>
-                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">유저명(영문)</th>  
-                          <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
-                            <input type="text" class="p-2 px-4 border border-gray-200 rounded-lg text-sm">
+                          <th class="px-2 lg:px-6 py-3 text-center text-sm font-medium text-gray-500 dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64 whitespace-nowrap">Mail Recipient(직접입력)</th>  
+                          <td class="px-2 lg:px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
+                            <textarea class="py-2 px-3 sm:py-3 sm:px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none " rows="3" placeholder=""></textarea>
                           </td>
                         </tr>
                         <tr>
-                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">유저명(한글)</th>  
-                          <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
-                            <input type="text" class="p-2 px-4 border border-gray-200 rounded-lg text-sm">
+                          <th class="px-2 lg:px-6 py-3 text-center text-sm font-medium text-gray-500 dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64 whitespace-nowrap">Subject</th>    
+                          <td class="px-2 lg:px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
+                            <input type="text" class="p-2 px-4 border border-gray-200 rounded-lg text-sm w-full">
                           </td>
                         </tr>
                         <tr>
-                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">국가</th>  
-                          <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
-                            <select class="py-2 px-4 pe-9 block border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
-                                <option>select options</option>
-                                <option value="">OL</option>
-                                <option value="">OF</option>
-                                <option value="">AL</option>
-                                <option value="">AF</option>
-                              </select>
+                          <th class="px-2 lg:px-6 py-3 text-center text-sm font-medium text-gray-500 dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64 whitespace-nowrap">Content</th>  
+                          <td class="px-2 lg:px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
+                            <textarea class="py-2 px-3 sm:py-3 sm:px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" rows="3" placeholder=""></textarea>
                           </td>
                         </tr>
-                        <tr>
-                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">코드</th>  
-                          <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
-                            <div class="flex items-center gap-x-2">
-                              <input type="text" class="p-2 px-4 border border-gray-200 rounded-lg text-sm">
-                              <button type="button" class="p-2 px-4 border border-gray-200 bg-gray-100 text-gray-500 rounded-lg hover:bg-gray-200" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-scale-animation-modal" data-hs-overlay="#changePassword">데이터 가져오기</button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">이메일</th>  
-                          <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
-                            <input type="text" class="p-2 px-4 border border-gray-200 rounded-lg text-sm">
-                           
-                          </td>
-                        </tr>
-                        <tr>
-                          <th class="px-6 py-3 text-start text-sm font-medium text-gray-500 uppercase dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 w-64">메모</th>  
-                          <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-800">
-                            <div class="max-w-sm space-y-3">
-                              <textarea class="py-2 px-3 sm:py-3 sm:px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none " rows="3" placeholder=""></textarea>
-                            </div>
-                           
-                          </td>
-                        </tr>
-
-                        
                       </tbody>
                     </table>
                   </div>
@@ -333,8 +318,8 @@
               </div>
               <div class="flex justify-center mt-6">
                 <div class="flex items-center justify-center gap-x-2 w-[50%]">
-                  <button type="button" class="flex w-full justify-center rounded-lg bg-gray-600 px-8 py-3 text-md font-semibold text-white shadow-xs hover:bg-gray-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">취소</button>
-                  <button type="button" class="flex w-full justify-center rounded-lg bg-blue-600 px-8 py-3 text-md font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">저장</button>
+                  <button type="button" class="flex w-full justify-center rounded-lg bg-gray-600 px-8 py-3 text-md font-semibold text-white shadow-xs hover:bg-gray-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">Cancel</button>
+                  <button type="button" class="flex w-full justify-center rounded-lg bg-blue-600 px-8 py-3 text-md font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Send</button>
                 </div>
               </div>
             </div>
@@ -353,14 +338,501 @@
       </div>
     </div>
 
+    <!--password modal--> 
+    <div id="mailSelect" class="hs-overlay hidden size-full fixed top-0 start-0 overflow-x-hidden overflow-y-auto pointer-events-none z-[80]" role="dialog" tabindex="-1" aria-labelledby="mailSelect-label">
+      <div class="hs-overlay-animation-target hs-overlay-open:scale-100 hs-overlay-open:opacity-100 scale-95 opacity-0 ease-in-out transition-all duration-200 sm:max-w-3xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-56px)] flex items-center">
+        <div class="w-full flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl pointer-events-auto dark:bg-neutral-800 dark:border-neutral-700 dark:shadow-neutral-700/70">
+          <div class="flex justify-between items-center py-3 px-4 border-b border-gray-200 dark:border-neutral-700">
+            <h3 id="mailSelect-label" class="font-bold text-gray-800 dark:text-white">
+              E-mail Select
+            </h3>
+            <button type="button" class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:text-neutral-400 dark:focus:bg-neutral-600" aria-label="Close" data-hs-overlay="#mailSelect">
+              <i data-lucide="X" class="shrink-0 size-4"></i>
+            </button>
+          </div>
+          <div class="p-4 overflow-y-auto">
+            <div id="hs-datatable-with-export" class="customizing-table" data-hs-datatable='{
+                "pageLength": -1,
+                "pagingOptions": {
+                  "pageBtnClasses": "min-w-10 flex justify-center items-center text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 py-2.5 text-sm rounded-full disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:focus:bg-neutral-700 dark:hover:bg-neutral-700"
+                },
+                "selecting": true,
+                "rowSelectingOptions": {
+                  "selectAllSelector": "#hs-table-search-checkbox-all"
+                },
+                "language": {
+                  "zeroRecords": "<div class=\"py-10 px-5 flex flex-col justify-center items-center text-center\"><svg class=\"shrink-0 size-6 text-gray-500 dark:text-neutral-500\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><div class=\"max-w-sm mx-auto\"><p class=\"mt-2 text-sm text-gray-600 dark:text-neutral-400\">No search results</p></div></div>"
+                }
+              }'>
+                <div class="pb-3 flex items-start gap-2 justify-between border-b border-b-gray-200 flex-col lg:flex-row lg:items-center">
+                  <select class="py-2 px-4 pe-9 block border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" id="filter1">
+                    <option value="all">select summary</option>
+                    <option value="Y">summary</option>                    
+                  </select>
+                  <div class="relative max-w-xs w-full">
+                    <label for="hs-table-input-search" class="sr-only">Search</label>
+                    <input type="text" name="hs-table-search" id="hs-table-input-search" class="py-1.5 py-2 px-3 ps-9 block w-full border border-gray-200 shadow-2xs rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Search for" data-hs-datatable-search="">
+                    <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-3">
+                      <i data-lucide="search" class="size-4 text-gray-400 dark:text-neutral-500"></i>                          
+                    </div>
+                  </div>
+                </div>
+
+                <div class="overflow-x-auto ">
+                  <div class="min-w-full inline-block align-middle">
+                    <div class="overflow-hidden ">
+                      <div class="overflow-y-auto max-h-96">
+                      <table class="min-w-full">
+                        <thead class="bg-gray-100 border-y border-gray-200 ">
+                          <tr>
+                            <th scope="col" class="py-1 px-3 pe-0 --exclude-from-ordering">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-all" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                                <label for="hs-table-search-checkbox-all" class="sr-only">Checkbox</label>
+                              </div>
+                            </th>
+                            <th scope="col" class="py-1 group text-center font-normal focus:outline-hidden">
+                              <div class="py-1 px-2.5 inline-flex items-center border border-transparent text-xs text-gray-500 rounded-md hover:border-gray-200 dark:text-neutral-500 dark:hover:border-neutral-700">
+                                summary
+                                <svg class="size-3.5 ms-1 -me-0.5 text-gray-400 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path class="hs-datatable-ordering-desc:text-blue-600 dark:hs-datatable-ordering-desc:text-blue-500" d="m7 15 5 5 5-5"></path>
+                                  <path class="hs-datatable-ordering-asc:text-blue-600 dark:hs-datatable-ordering-asc:text-blue-500" d="m7 9 5-5 5 5"></path>
+                                </svg>
+                              </div>
+                            </th>
+                            <th scope="col" class="py-1 group text-center font-normal focus:outline-hidden">
+                              <div class="py-1 px-2.5 inline-flex items-center border border-transparent text-xs text-gray-500 rounded-md hover:border-gray-200 dark:text-neutral-500 dark:hover:border-neutral-700">
+                                user
+                                <svg class="size-3.5 ms-1 -me-0.5 text-gray-400 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path class="hs-datatable-ordering-desc:text-blue-600 dark:hs-datatable-ordering-desc:text-blue-500" d="m7 15 5 5 5-5"></path>
+                                  <path class="hs-datatable-ordering-asc:text-blue-600 dark:hs-datatable-ordering-asc:text-blue-500" d="m7 9 5-5 5 5"></path>
+                                </svg>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="py-1 group text-center font-normal focus:outline-hidden">
+                              <div class="py-1 px-2.5 inline-flex items-center border border-transparent text-xs text-gray-500 rounded-md hover:border-gray-200 dark:text-neutral-500 dark:hover:border-neutral-700">
+                                User Name
+                                <svg class="size-3.5 ms-1 -me-0.5 text-gray-400 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path class="hs-datatable-ordering-desc:text-blue-600 dark:hs-datatable-ordering-desc:text-blue-500" d="m7 15 5 5 5-5"></path>
+                                  <path class="hs-datatable-ordering-asc:text-blue-600 dark:hs-datatable-ordering-asc:text-blue-500" d="m7 9 5-5 5 5"></path>
+                                </svg>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="py-1 group text-center font-normal focus:outline-hidden">
+                              <div class="py-1 px-2.5 inline-flex items-center border border-transparent text-xs text-gray-500 rounded-md hover:border-gray-200 dark:text-neutral-500 dark:hover:border-neutral-700">
+                                User Email
+                                <svg class="size-3.5 ms-1 -me-0.5 text-gray-400 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path class="hs-datatable-ordering-desc:text-blue-600 dark:hs-datatable-ordering-desc:text-blue-500" d="m7 15 5 5 5-5"></path>
+                                  <path class="hs-datatable-ordering-asc:text-blue-600 dark:hs-datatable-ordering-asc:text-blue-500" d="m7 9 5-5 5 5"></path>
+                                </svg>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AN, JUN SUNG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jsrnb@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AN, JUN SUNG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jsrnb@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-C</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AHN, JONG SUK</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">pd_keepintouch@kakao.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center"></td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJW-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AHN, JIN WOONG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jwzzang1993@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AN, JUN SUNG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jsrnb@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AN, JUN SUNG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jsrnb@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-C</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AHN, JONG SUK</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">pd_keepintouch@kakao.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center"></td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJW-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AHN, JIN WOONG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jwzzang1993@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AN, JUN SUNG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jsrnb@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AN, JUN SUNG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jsrnb@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-C</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AHN, JONG SUK</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">pd_keepintouch@kakao.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center"></td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJW-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AHN, JIN WOONG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jwzzang1993@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AN, JUN SUNG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jsrnb@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AN, JUN SUNG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jsrnb@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-C</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AHN, JONG SUK</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">pd_keepintouch@kakao.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center"></td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJW-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AHN, JIN WOONG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jwzzang1993@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AN, JUN SUNG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jsrnb@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AN, JUN SUNG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jsrnb@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-C</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AHN, JONG SUK</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">pd_keepintouch@kakao.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center"></td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJW-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AHN, JIN WOONG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jwzzang1993@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AN, JUN SUNG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jsrnb@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AN, JUN SUNG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jsrnb@naver.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">Y</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJS-C</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AHN, JONG SUK</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">pd_keepintouch@kakao.com</td>
+                          </tr>
+                          <tr class="hover:bg-gray-100">
+                            <td class="py-2 ps-3">
+                              <div class="flex items-center h-5">
+                                <input id="hs-table-search-checkbox-2" type="checkbox" class="border-gray-300 rounded-sm text-blue-600 checked:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" data-hs-datatable-row-selecting-individual="">
+                                <label for="hs-table-search-checkbox-2" class="sr-only">Checkbox</label>
+                              </div>
+                            </td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center"></td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AJW-A</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">AHN, JIN WOONG</td>
+                            <td class="p-2 px-1 whitespace-nowrap text-xs text-gray-800 text-center">jwzzang1993@naver.com</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--paging-->
+                <div class="paging-wrap flex items-center justify-between pt-4">
+                  <div class="whitespace-nowrap text-sm text-gray-500 font-bold" data-hs-datatable-info="">      
+                    <span data-hs-datatable-info-to=""></span> / <span data-hs-datatable-info-length=""></span>
+                  </div>
+                  <div class="py-1 px-4 hidden" data-hs-datatable-paging="">
+                    <nav class="flex items-center space-x-1">
+                      <button type="button" class="p-2.5 min-w-10 inline-flex justify-center items-center gap-x-2 text-sm rounded-full text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" data-hs-datatable-paging-prev="">
+                        <span aria-hidden="true"><i data-lucide="chevrons-left" class="size-4"></i></span>
+                        <span class="sr-only">Previous</span>
+                      </button>
+                      <div class="flex items-center space-x-1 [&>.active]:bg-gray-100 dark:[&>.active]:bg-neutral-700" data-hs-datatable-paging-pages=""></div>
+                      <button type="button" class="p-2.5 min-w-10 inline-flex justify-center items-center gap-x-2 text-sm rounded-full text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" data-hs-datatable-paging-next="">
+                        <span class="sr-only">Next</span>
+                        <span aria-hidden="true"><i data-lucide="chevrons-right" class="size-4"></i></span>
+                      </button>
+                    </nav>
+                  </div>
+                  <div class="flex items-center justify-end space-x-2">     
+                  <!-- Select -->
+                  <select class="hidden" data-hs-select='{
+                    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
+                    "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-2 px-3 pe-9 flex text-nowrap w-full cursor-pointer bg-white border border-gray-200 rounded-lg text-start text-sm text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 before:absolute before:inset-0 before:z-1 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800",
+                    "dropdownClasses": "mt-2 z-50 w-20 max-h-72 p-1 space-y-0.5 bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:bg-neutral-900 dark:border-neutral-700",
+                    "optionClasses": "py-2 px-3 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-md focus:outline-hidden focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800",
+                    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"shrink-0 size-3.5 text-blue-600 dark:text-blue-500\" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>",
+                    "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg class=\"shrink-0 size-3.5 text-gray-500 dark:text-neutral-500\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m7 15 5 5 5-5\"/><path d=\"m7 9 5-5 5 5\"/></svg></div>"
+                  }' data-hs-datatable-page-entities="">
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="-1" selected="">All</option>
+                  </select>
+                  <!-- End Select -->
+                </div>
+                  
+
+                </div>
+              </div>
+          </div>
+          <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t border-gray-200 dark:border-neutral-700">
+            <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" data-hs-overlay="#mailSelect">
+              Close
+            </button>
+            <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
     <!-- JS PLUGINS -->
     <script src="/src/js/preline.min.js" crossorigin="anonymous" defer></script>
+    <!-- Datatable -->
+    <script src="/src/js/jquery.min.js"></script>
+    <script src="/src/js/dataTables.js"></script>
     <script>
       window.addEventListener("load", () => {
         lucide.createIcons();
         window.HSStaticMethods.autoInit();
+        
+        let dataTable = HSDataTable.getInstance(".customizing-table", true).element.dataTable;
+        if (dataTable) {
+            // customizing-table의 th 개수 가져오기
+            const thCount = document.querySelectorAll(
+                ".customizing-table thead th"
+            ).length;
+
+            // 필터링 함수
+            dataTable.search.fixed("range", function (searchStr, data, index) {
+                for (let i = 0; i <= thCount; i++) {
+                    const filter = document.querySelector(`#filter${i}`);
+                    const value = filter?.value === "all" ? "" : filter?.value;
+                  
+
+                    let dataValue = data[i] || "";
+                    // HTML 태그 제거 (모든 태그 삭제하고 순수 텍스트만 남김)
+                    dataValue = dataValue.replace(/<[^>]*>/g, "").trim();
+
+                    if (value && value !== dataValue) {
+                        return false; // 하나라도 일치하지 않으면 false 반환
+                    }
+                    
+                }
+                return true;
+            });
+
+            // 이벤트 리스너 등록
+            for (let i = 0; i <= thCount; i++) {
+                const filter = document.querySelector(`#filter${i}`);
+                const filterInclude = document.querySelector(`#filter${i}_include`);
+                if (filter) {
+                    filter.addEventListener("change", () => dataTable.draw());
+                }
+                if (filterInclude) {
+                    filterInclude.addEventListener("change", () =>
+                        dataTable.draw()
+                    );
+                }
+            }
+        }
+
       });
     </script>
   
