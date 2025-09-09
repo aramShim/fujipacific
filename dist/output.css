@@ -905,6 +905,10 @@ select {
   top: 100%;
 }
 
+.top-\[78px\] {
+  top: 78px;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -3226,6 +3230,10 @@ pre {
 
   .lg\:w-\[60\%\] {
     width: 60%;
+  }
+
+  .lg\:w-\[50\%\] {
+    width: 50%;
   }
 
   .lg\:translate-x-0 {
