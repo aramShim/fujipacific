@@ -163,3 +163,18 @@ pre {
   width:18px; height:18px; border-radius:9999px; background:#22c55e;
   display:flex; align-items:center; justify-content:center; font:700 12px/1 "Inter", system-ui;
 }
+
+/* 높이 고정/최소높이 */
+.ck-editor__editable[role="textbox"] {
+  min-height: 420px;        /* 원하는 높이 */
+  max-height: 700px;        /* 스크롤 생기게 하려면 추가 */
+  overflow: auto;
+}
+.ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+  --ck-border-radius: 0.5rem;
+}
+.ck .ck-placeholder, .ck.ck-placeholder {
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
