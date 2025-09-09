@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="src/css/input.css" />
     <link rel="stylesheet" href="src/css/pretendard.css" />
   </head>
-  <body class="hs-overlay-body-open hs-overlay-body-open:overflow-hidden dark:bg-neutral-900 background-color-blue">
+  <body class="hs-overlay-body-open hs-overlay-body-open:overflow-hidden background-color-blue">
     <div class="min-h-screen flex items-start">
       <!-- Mobile Sidebar Overlay -->
       <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden hidden"></div>
@@ -40,7 +40,7 @@
       <!-- Sidebar -->
       <div
         id="hs-application-sidebar"
-        class="hs-overlay [--auto-close:lg] hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform h-full hidden fixed inset-y-0 start-0 z-[60] bg-white lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 dark:bg-neutral-800 dark:border-neutral-700 w-64 p-3 background-color-blue"
+        class="hs-overlay [--auto-close:lg] hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform h-full hidden fixed inset-y-0 start-0 z-[60] bg-white lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 w-64 p-3 background-color-blue"
         role="dialog"
         tabindex="-1"
         aria-label="Sidebar"
@@ -130,7 +130,7 @@
                 <span class="text-xs text-gray-700">geo890@gmail.com</span>
               </button>
               <div
-                class="hs-dropdown-menu hs-dropdown-open:opacity-100 transition-[opacity,margin] duration opacity-0 rounded-xl w-4/5 shadow-[0_10px_40px_10px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_40px_10px_rgba(0,0,0,0.2)] hidden z-40 bg-white"
+                class="hs-dropdown-menu hs-dropdown-open:opacity-100 transition-[opacity,margin] duration opacity-0 rounded-xl w-4/5 shadow-[0_10px_40px_10px_rgba(0,0,0,0.08)] hidden z-40 bg-white"
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="hs-pro-dnwpd"
@@ -139,17 +139,17 @@
                   <p class="text-sm font-medium text-gray-800">
                     홍길동님
                   </p>
-                  <p class="text-xs text-gray-500 dark:text-neutral-500">
+                  <p class="text-xs text-gray-500">
                     geo890@gmail.com
                   </p>
                 </div>
 
                 <div class="p-1.5 space-y-0.5">
-                  <a href="/mypage.html" class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400">
+                  <a href="/mypage.html" class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100">
                     <i data-lucide="user-cog" class="shrink-0 size-4"></i>
                     마이페이지
                   </a>
-                  <button type="button" class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400">
+                  <button type="button" class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100">
                     <i data-lucide="log-out" class="shrink-0 size-4"></i>
                     로그아웃
                   </button>
@@ -163,12 +163,12 @@
       <!-- Main Content -->
       <div class="flex-1 flex flex-col w-full lg:ps-64 min-h-screen">
         <!-- Top Header -->
-        <header class="bg-white px-4 lg:px-6 py-6 sticky top-0 inset-x-0 z-30 dark:bg-neutral-800 background-color-blue">
+        <header class="bg-white px-4 lg:px-6 py-6 sticky top-0 inset-x-0 z-30 background-color-blue">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-x-4 lg:gap-x-0">
               <button
                 type="button"
-                class="lg:hidden flex justify-center items-center gap-x-3 size-8 text-sm text-gray-600 hover:bg-gray-100 rounded-full disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 dark:hover:text-neutral-200 dark:focus:text-neutral-200"
+                class="lg:hidden flex justify-center items-center gap-x-3 size-8 text-sm text-gray-600 hover:bg-gray-100 rounded-full disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100"
                 aria-haspopup="dialog"
                 aria-expanded="false"
                 aria-controls="hs-sidebar-content-push"
@@ -185,7 +185,7 @@
                 <button
                   id="hs-dropdown-user"
                   type="button"
-                  class="inline-flex justify-center items-center gap-x-2 text-sm rounded-full text-gray-600 hover:text-gray-800 focus:outline-none disabled:opacity-50 disabled:pointer-events-none dark:text-white"
+                  class="inline-flex justify-center items-center gap-x-2 text-sm rounded-full text-gray-600 hover:text-gray-800 focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
                   aria-haspopup="menu"
                   aria-expanded="false"
                   aria-label="Dropdown"
@@ -194,30 +194,30 @@
                 </button>
 
                 <div
-                  class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
+                  class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="hs-dropdown-user"
                 >
-                  <div class="py-3 px-5 bg-gray-100 rounded-t-lg dark:bg-neutral-700">
-                    <p class="text-sm font-medium text-gray-800 dark:text-neutral-200">
+                  <div class="py-3 px-5 bg-gray-100 rounded-t-lg">
+                    <p class="text-sm font-medium text-gray-800">
                       홍길동님
                     </p>
-                    <p class="text-xs text-gray-500 dark:text-neutral-500">
+                    <p class="text-xs text-gray-500">
                       geo890@gmail.com
                     </p>
                   </div>
                   <div class="p-1.5 space-y-0.5">
                     <a
                       href="/mypage.html"
-                      class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                      class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
                     >
                       <i data-lucide="user-cog" class="shrink-0 size-4"></i>
                       마이페이지
                     </a>
                     <button
                       type="button"
-                      class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                      class="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
                     >
                       <i data-lucide="log-out" class="shrink-0 size-4"></i>
                       로그아웃
@@ -250,86 +250,77 @@
               </nav>
             </div>
 
-            <div class="mt-3">
+            <div class="mt-3">              
+              <div class="pb-3 flex items-start flex-col justify-between gap-2 md:flex-row md:items-center sticky top-[76px]" style="background-color: #fafafa">                    
+                  <select class="py-2 px-4 pe-9 block border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                      <option>select period</option>
+                      <option value="2Q2025">2Q2025</option>
+                      <option value="1Q2025">1Q2025</option>
+                      <option value="4Q2024">4Q2024</option>
+                      <option value="3Q2024">3Q2024</option>
+                      <option value="2Q2024">2Q2024</option>
+                      <option value="1Q2024">1Q2024</option>
+                      <option value="4Q2023">4Q2023</option>
+                      <option value="3Q2023">3Q2023</option>
+                      <option value="2Q2023">2Q2023</option>
+                      <option value="1Q2023">1Q2023</option>
+                      <option value="4Q2022">4Q2022</option>
+                      <option value="3Q2022">3Q2022</option>
+                      <option value="2Q2022">2Q2022</option>
+                      <option value="1Q2022">1Q2022</option>
+                      <option value="4Q2021">4Q2021</option>
+                      <option value="3Q2021">3Q2021</option>
+                      <option value="2Q2021">2Q2021</option>
+                      <option value="1Q2021">1Q2021</option>
+                  </select>
+              </div>
               
-                <div class="pb-3 flex items-start flex-col justify-between gap-2 md:flex-row md:items-center sticky top-[76px]" style="background-color: #fafafa">                    
-                    <select class="py-2 px-4 pe-9 block border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
-                        <option>select period</option>
-                        <option value="2Q2025">2Q2025</option>
-                        <option value="1Q2025">1Q2025</option>
-                        <option value="4Q2024">4Q2024</option>
-                        <option value="3Q2024">3Q2024</option>
-                        <option value="2Q2024">2Q2024</option>
-                        <option value="1Q2024">1Q2024</option>
-                        <option value="4Q2023">4Q2023</option>
-                        <option value="3Q2023">3Q2023</option>
-                        <option value="2Q2023">2Q2023</option>
-                        <option value="1Q2023">1Q2023</option>
-                        <option value="4Q2022">4Q2022</option>
-                        <option value="3Q2022">3Q2022</option>
-                        <option value="2Q2022">2Q2022</option>
-                        <option value="1Q2022">1Q2022</option>
-                        <option value="4Q2021">4Q2021</option>
-                        <option value="3Q2021">3Q2021</option>
-                        <option value="2Q2021">2Q2021</option>
-                        <option value="1Q2021">1Q2021</option>
-                    </select>
-                </div>
-                
-                <!-- Card -->
-                <div class="flex flex-col bg-white border shadow-sm rounded-xl mb-4">
-                    <div class="p-4 md:p-5">
-                        <div class="flex items-center gap-x-2">
-                            <h3 class="text-md font-semibold text-gray-800 dark:text-neutral-500">Top Songs</h3>
-                        </div>
-                        <div class="mt-1">
-                            <div class="flex items-center justify-center w-full gap-x-12 flex-col lg:flex-row sm:flex-row ">
-                                <div class="h-[300px] aspect-square p-4">
-                                    <canvas id="type-donut" class="w-full h-full"></canvas>
-                                </div>
-                                <div id="type-legend" class=""></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Card -->
-                 <!-- Grid -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
-                    <!-- Card -->
-                    <div class="flex flex-col bg-white border shadow-sm rounded-xl">
-                        <div class="p-4 md:p-5">
-                        <div class="flex items-center gap-x-2">
-                            <h3 class="text-md font-semibold text-gray-800 dark:text-neutral-500">Breakdown by Territory</h3>
-                        </div>
-                        <div class="mt-4 flex items-center">
-                            <div id="top-territory" class="space-y-2 w-full"></div>
-                        </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->
+              <!-- Card -->
+              <div class="flex flex-col bg-white border shadow-sm rounded-xl mb-4">
+                  <div class="p-4 md:p-5">
+                      <div class="flex items-center gap-x-2">
+                          <h3 class="text-md font-semibold text-gray-800">Top Songs</h3>
+                      </div>
+                      <div class="mt-1">
+                          <div class="flex items-center justify-center w-full gap-x-12 flex-col lg:flex-row sm:flex-row ">
+                              <div class="h-[300px] aspect-square p-4">
+                                  <canvas id="type-donut" class="w-full h-full"></canvas>
+                              </div>
+                              <div id="type-legend" class=""></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- End Card -->
+                <!-- Grid -->
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
+                  <!-- Card -->
+                  <div class="flex flex-col bg-white border shadow-sm rounded-xl">
+                      <div class="p-4 md:p-5">
+                      <div class="flex items-center gap-x-2">
+                          <h3 class="text-md font-semibold text-gray-800">Breakdown by Territory</h3>
+                      </div>
+                      <div class="mt-4 flex items-center">
+                          <div id="top-territory" class="space-y-2 w-full"></div>
+                      </div>
+                      </div>
+                  </div>
+                  <!-- End Card -->
 
-                    <!-- Card -->
-                    <div class="flex flex-col bg-white border shadow-sm rounded-xl overflow-x-auto">
-                        <div class="p-4 md:p-5">
-                            <div class="flex items-center gap-x-2">
-                                <h3 class="text-md font-semibold text-gray-800 dark:text-neutral-500">Breakdown by Type</h3>
-                            </div>
+                  <!-- Card -->
+                  <div class="flex flex-col bg-white border shadow-sm rounded-xl overflow-x-auto">
+                      <div class="p-4 md:p-5">
+                          <div class="flex items-center gap-x-2">
+                              <h3 class="text-md font-semibold text-gray-800">Breakdown by Type</h3>
+                          </div>
 
-                            <div class="mt-4 flex items-center">
-                                <div id="top-territory2" class="space-y-2 w-full"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->                
-                </div>
-
-
-
-
-                 
-                    
-                
-             
+                          <div class="mt-4 flex items-center">
+                              <div id="top-territory2" class="space-y-2 w-full"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- End Card -->                
+              </div>             
             </div>
             
           </div>
@@ -338,7 +329,7 @@
         <!-- Footer-->
         <footer class="w-full px-6 py-4 mt-auto">
           <div class="flex w-full items-center justify-between">
-            <p class="text-gray-400 text-xs dark:text-neutral-500">
+            <p class="text-gray-400 text-xs">
               © 1998-2025 FUJIPACIFIC. ALL RIGHTS RESERVED.
             </p>
           </div>
@@ -346,112 +337,105 @@
         <!-- End Footer -->
       </div>
     </div>
-
     <!--footer-->
+
+    <!--loader-->
+    <div class="loader-wrap bg-[rgba(0,0,0,.6)] flex items-center justify-center" id="spinLoader" style="display:none;">
+      <span class="loader after:border-neutral-200 before:border-neutral-200"></span>
+    </div>
 
     <!-- JS PLUGINS -->
     <script src="/src/js/preline.min.js" crossorigin="anonymous" defer></script>
 
     <!--차트-->
     <link rel="stylesheet" href="src/css/Chart.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="src/js/chart.js"></script>
     
     <script>
-    /** 데이터 */
-    const labels = ['Performance', 'Digital', 'Mechanical', 'Sync', 'Others'];
-    const values = [56059, 63000, 50000, 300000, 355000];
-    const colors = [
-      '#ff3fa0', // Performance (핑크)
-      '#f5a623', // Digital (오렌지)
-      '#1cc7c1', // Mechanical (민트)
-      '#27ae60', // Sync (그린)
-      '#c3c7cf'  // Others (그레이)
-    ];
+      /** 데이터 */
+      const labels = ['Performance', 'Digital', 'Mechanical', 'Sync', 'Others'];
+      const values = [56059, 63000, 50000, 300000, 355000];
+      const colors = [
+        '#ff3fa0', // Performance (핑크)
+        '#f5a623', // Digital (오렌지)
+        '#1cc7c1', // Mechanical (민트)
+        '#27ae60', // Sync (그린)
+        '#c3c7cf'  // Others (그레이)
+      ];
 
-    // 합계/비율 계산
-    const total = values.reduce((a, b) => a + b, 0);
-    const pct = v => (total ? (v / total) * 100 : 0);
+      // 합계/비율 계산
+      const total = values.reduce((a, b) => a + b, 0);
+      const pct = v => (total ? (v / total) * 100 : 0);
 
-    // 통화 포매터
-    const fmtMoney = new Intl.NumberFormat('ko-KR', { style: 'currency', currency: 'KWR', maximumFractionDigits: 2 });
-    const fmtCompact = new Intl.NumberFormat('ko-KR', { notation: 'compact', maximumFractionDigits: 1 });
+      // 통화 포매터
+      const fmtMoney = new Intl.NumberFormat('ko-KR', { style: 'currency', currency: 'KWR', maximumFractionDigits: 2 });
+      const fmtCompact = new Intl.NumberFormat('ko-KR', { notation: 'compact', maximumFractionDigits: 1 });
 
-    /** 중앙 텍스트 플러그인 */
-    const centerText = {
-      id: 'centerText',
-      afterDraw(chart, args, opts) {
-        const { ctx, chartArea: { top, bottom, left, right } } = chart;
-        const x = (left + right) / 2;
-        const y = (top + bottom) / 2;
+      /** 중앙 텍스트 플러그인 */
+      const centerText = {
+        id: 'centerText',
+        afterDraw(chart, args, opts) {
+          const { ctx, chartArea: { top, bottom, left, right } } = chart;
+          const x = (left + right) / 2;
+          const y = (top + bottom) / 2;
 
-        ctx.save();
-        ctx.textAlign = 'center';
-        ctx.fillStyle = '#999';
-        ctx.font = '600 12px Pretendard, system-ui, -apple-system, Segoe UI, Roboto, sans-serif';
-        ctx.fillText('TOTAL', x, y - 8);
-        ctx.fillStyle = '#333';
-        ctx.font = '700 16px Pretendard, system-ui, -apple-system, Segoe UI, Roboto, sans-serif';
-        ctx.fillText('KRW ' + fmtCompact.format(total), x, y + 14);
-        ctx.restore();
-      }
-    };
+          ctx.save();
+          ctx.textAlign = 'center';
+          ctx.fillStyle = '#999';
+          ctx.font = '600 12px Pretendard, system-ui, -apple-system, Segoe UI, Roboto, sans-serif';
+          ctx.fillText('TOTAL', x, y - 8);
+          ctx.fillStyle = '#333';
+          ctx.font = '700 16px Pretendard, system-ui, -apple-system, Segoe UI, Roboto, sans-serif';
+          ctx.fillText('KRW ' + fmtCompact.format(total), x, y + 14);
+          ctx.restore();
+        }
+      };
 
-    const ctx = document.getElementById('type-donut').getContext('2d');
-    new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-        labels,
-        datasets: [{
-          data: values,
-          backgroundColor: colors,
-          borderWidth: 0,
-          hoverOffset: 4
-        }]
-      },
-      options: {
-        responsive: true,
-        cutout: '70%',                 // 도넛 두께
-        plugins: {
-          legend: { display: false },  // 기본 레전드 숨김
-          tooltip: {
-            callbacks: {
-              label: (ctx) => {
-                const v = ctx.parsed;
-                return ` ${ctx.label}: ${fmtMoney.format(v)} (${pct(v).toFixed(2)}%)`;
+      const ctx = document.getElementById('type-donut').getContext('2d');
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels,
+          datasets: [{
+            data: values,
+            backgroundColor: colors,
+            borderWidth: 0,
+            hoverOffset: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          cutout: '70%',                 // 도넛 두께
+          plugins: {
+            legend: { display: false },  // 기본 레전드 숨김
+            tooltip: {
+              callbacks: {
+                label: (ctx) => {
+                  const v = ctx.parsed;
+                  return ` ${ctx.label}: ${fmtMoney.format(v)} (${pct(v).toFixed(2)}%)`;
+                }
               }
             }
           }
-        }
-      },
-      plugins: [centerText]
-    });
+        },
+        plugins: [centerText]
+      });
 
-    /** 커스텀 레전드 HTML */
-    const legendWrap = document.getElementById('type-legend');
-    legendWrap.innerHTML = labels.map((name, i) => {
-      const v = values[i];
-      return `
-        <div class="flex items-center gap-2 p-1">
-          <span class="rounded-full inline-block w-[8px] h-[8px]" style="background:${colors[i]}"></span>
-          <span class="flex-1 text-gray-800 text-sm w-[110px]">${name}</span>
-          <span class="text-gray-600 text-sm"><span class="text-xs">KRW</span> <b>${v.toLocaleString('ko-KR')}</b></span>
-          <span class="text-right text-gray-600 text-xs">${pct(v).toFixed(2)}%</span>
-        </div>
-      `;
-    }).join('');
+      /** 커스텀 레전드 HTML */
+      const legendWrap = document.getElementById('type-legend');
+      legendWrap.innerHTML = labels.map((name, i) => {
+        const v = values[i];
+        return `
+          <div class="flex items-center gap-2 p-1">
+            <span class="rounded-full inline-block w-[8px] h-[8px]" style="background:${colors[i]}"></span>
+            <span class="flex-1 text-gray-800 text-sm w-[110px]">${name}</span>
+            <span class="text-gray-600 text-sm"><span class="text-xs">KRW</span> <b>${v.toLocaleString('ko-KR')}</b></span>
+            <span class="text-right text-gray-600 text-xs">${pct(v).toFixed(2)}%</span>
+          </div>
+        `;
+      }).join('');
     </script>
 
-    <style>
-      /* 초기엔 0%에서 시작 */
-      .bar-fill,.bar-fill2 {
-        width: 0;
-        transition: width 1.2s ease-in-out;
-      }
-      
-      @media (prefers-reduced-motion: reduce) {
-        .bar-fill { transition: none; }
-      }
-    </style>
     <script>
 
       const territories = [
@@ -528,9 +512,7 @@
       }, 100);
 
     </script>
-
    
-
     <script>
       window.addEventListener("load", () => {
         lucide.createIcons();

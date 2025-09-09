@@ -95,4 +95,71 @@ pre {
 .dt-column-order {
   display: none !important;
 }
+.loader-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.loader::after,
+.loader::before {
+    content: "";
+    box-sizing: border-box;
+    transform: scale(0);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: animloader 2s linear infinite;
+}
+.loader::after {
+    animation-delay: 1s;
+}
+@keyframes animloader {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+/* 초기엔 0%에서 시작 */
+.bar-fill,.bar-fill2 {
+  width: 0;
+  transition: width 1.2s ease-in-out;
+}
 
+@media (prefers-reduced-motion: reduce) {
+  .bar-fill { transition: none; }
+}
+/* 외부 커스텀 툴팁 (스샷 스타일) */
+.rt-tooltip {
+  position: absolute; pointer-events: none; opacity: 0; transform: translate(-50%, -120%);
+  background:#111827; color:#fff; padding:6px 10px; border-radius:10px; font:600 13px/1.2 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  box-shadow: 0 6px 16px rgba(0,0,0,.15);
+  display:flex; align-items:center; gap:6px; z-index: 30;
+}
+.rt-tooltip::after { /* 말풍선 꼬리 */
+  content:""; position:absolute; left:50%; bottom:-6px; transform:translateX(-50%);
+  border:6px solid transparent; border-top-color:#111827;
+}
+.rt-tooltip .ico {
+  width:18px; height:18px; border-radius:9999px; background:#22c55e;
+  display:flex; align-items:center; justify-content:center; font:700 12px/1 "Inter", system-ui;
+}
